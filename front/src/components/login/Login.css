@@ -1,0 +1,23 @@
+body{
+    background-image: url('../images/hexagonos.jpg');
+    background-repeat: no-repeat;   
+    background-size: cover;
+}
+
+#botton-primary {
+    background-color: #FF982F;
+    color:#ffff;
+}
+
+#botton-primary:hover {
+    background-color: #FF8100;
+    color:#ffff;
+    
+}
+
+a{
+    text-decoration: none;
+    outline: none !important;
+    color: black;
+}
+

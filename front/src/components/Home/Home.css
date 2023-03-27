@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+    
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#FFC12F, #FF8100);
+    border-radius: 50px;
+    border: 2px solid #ffffff;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient( #e7a202, #da6f04);
+
+}
+
+.fotoMovil {
+    width: 300px;
+}
+.homePage {
+    background-color: #173664;
+    color: white;
+    /* background: -webkit-linear-gradient(45deg,#FFC12F,#FF8100); */
+    /* background-color: #030F25;
+    background: linear-gradient(#030F25, transparent); */
+
+}
+
+.containerQuestion {
+    background: #030F25;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 70px;
+    color: #36D0FF;
+
+}
+
+.gradientBox {
+    height: 150px;
+    background: linear-gradient(#030F25, 70%, #173664);
+}
+
+.containerResponse {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 70px;
+    padding-bottom: 30px;
+
+}
+
+.eslogan {
+    color: #02C4FB;
+    font-weight: 400;
+    /* background: -webkit-linear-gradient(-90deg, #36D0FF, #486CFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+
+.title {
+    padding-top: 100px;
+    background: -webkit-linear-gradient(0deg, #FFC12F, #FF8100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.infoBoxTitle {
+    background: -webkit-linear-gradient(0deg, #FFC12F, #FF8100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 50px;
+}
+
+.containerRRSS {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.containerRRSS h1 {
+    background: linear-gradient(to right, #FFC12F, #FF8100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.textQuestion {
+
+    background: linear-gradient(to bottom, #36D0FF, #486CFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.4px #FFC12F;
+
+}
+
+
+.fotoCabecera {
+    position: relative;
+}
+
+.displayContainer {
+
+    position: absolute;
+    padding: 180px 50px 75px 50px;
+    /* color: #ffff;
+    background-color: black;
+    background: linear-gradient(black, white); */
+
+
+}
+
+.somosSmartketing {
+    color: white;
+}
+
+.displayTextBox {
+    display: flex;
+    height: 40px;
+    width: 300px;
+    font-size: 17px;
+    line-height: 40px;
+    overflow: hidden;
+    color: white;
+
+}
+
+.displayText2 {
+
+    /* color: #FF8100; */
+    list-style: none;
+    padding-left: 10px;
+    font-size: 25px;
+    background: -webkit-linear-gradient(0deg, #FFC12F, #FF8100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    animation: cambiar 7s infinite;
+}
+
+@keyframes cambiar {
+    0% {
+        margin-top: 0;
+    }
+
+    20% {
+        margin-top: 0;
+    }
+
+    25% {
+        margin-top: -40px;
+    }
+
+    50% {
+        margin-top: -40px;
+    }
+
+    55% {
+        margin-top: -80px;
+    }
+
+    80% {
+        margin-top: -80px;
+    }
+
+    85% {
+        margin-top: -40px;
+    }
+
+    95% {
+        margin-top: -40px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+
+.displayText2,
+.displayText1 {
+    margin: 0;
+}
+
+.primeraFoto {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* .containerHello {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+} */
+
+.webInfo {
+    padding-bottom: 50px;
+}
+
+.webInfoBox {
+    display: flex;
+    padding: 1rem;
+    box-shadow: 0 0 12px black;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 15px;
+    color: black;
+    margin: 60px;
+    padding: 60px;
+    background-color: white;
+    
+}
+
+.infoBoxRow {
+display: flex;
+flex-direction: row;
+}
+
+.infoBox {
+    width: 50%;
+}
+
+.finalBox {
+    padding-bottom: 100px;
+    background: linear-gradient(to bottom, #FFC12F, #FF8100);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+
+#contact{
+    position: relative;
+}
+
+#contact::after{
+    content: '';
+    width: 8%;
+    height: 3px;
+    position: absolute;
+    background: linear-gradient(to right, #FFC12F, #FF982F);
+    bottom: 12%; left: 0%;
+    border-radius: 2px;
+    transition: all 0.7s ease-in-out;
+}
+
+#contact:hover::after{
+    right: 100%;
+    width: 100%;
+}
