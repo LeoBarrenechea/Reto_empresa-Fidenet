@@ -30,12 +30,12 @@ export default function Header() {
         }`}
       >
         <div className="container-fluid">
-          <a href="/home">
+          <a href="/">
             <img
               className="navbar-brand"
               src={logoHuella}
               alt="FIDENET"
-              onClick={() => navigate("/home")}
+              onClick={() => navigate("/")}
             />
           </a>
           <button
