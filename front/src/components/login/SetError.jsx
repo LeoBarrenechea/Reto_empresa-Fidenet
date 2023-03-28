@@ -28,13 +28,24 @@ export default function SetError({data})
     const classes = styles();
     const navigate = useNavigate();
 
-    if (data.access_token === undefined && data)
+    if (data.access_token === undefined && data.msg)
     {
-        return (
-            <Paper className={classes.noUserMsg}>
-                <p className={classes.letters}> no se ha encontrado ninguna cuenta con este nombre de usuario, intentalo de nuevo o <a className={classes.createAcc} onClick={() => navigate('/register')}>crea una cuenta</a></p>
-            </Paper>
-        )
+        if (data.msg === 'no username')
+        {
+            return (
+                <Paper className={classes.noUserMsg}>
+                    <p className={classes.letters}> no se ha encontrado ninguna cuenta con este nombre de usuario, intentalo de nuevo o <a className={classes.createAcc} onClick={() => navigate('/register')}>crea una cuenta</a></p>
+                </Paper>
+            )
+        }
+        else
+        {
+            return (
+                <Paper className={classes.noUserMsg}>
+                    <p className={classes.letters}> no se ha encontrado ninguna cuenta con este nombre de usuario, intentalo de nuevo o <a className={classes.createAcc} onClick={() => navigate('/register')}>crea una cuenta</a></p>
+                </Paper>
+            )
+        }
     }
     else
         return (
