@@ -42,7 +42,7 @@ export default function SetError({data})
         {
             return (
                 <Paper className={classes.noUserMsg}>
-                    <p className={classes.letters}> no se ha encontrado ninguna cuenta con este nombre de usuario, intentalo de nuevo o <a className={classes.createAcc} onClick={() => navigate('/register')}>crea una cuenta</a></p>
+                    <p color='error' className={classes.letters}>Contraseña incorrecta, intentalo de nuevo</p>
                 </Paper>
             )
         }
