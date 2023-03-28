@@ -1,5 +1,5 @@
 import "./Sidenav.css";
-import gear from "../../iconos-smartketing/gear.svg";
+import logout from "../../iconos-smartketing/logout.svg";
 import search from "../../iconos-smartketing/search.svg";
 import question from "../../iconos-smartketing/question-circle.svg";
 import document from "../../iconos-smartketing/file-earmark-text.svg";
@@ -18,8 +18,8 @@ export default function Sidenav() {
           </a>
         </li>
         <li className="nav-item">
-          <a href="/acerca-de" title="Acerca de">
-            <img className="nav-link" src={question} alt="question" />
+          <a href="/busqueda" title="Búsqueda">
+            <img className="nav-link" src={search} alt="search" />
           </a>
         </li>
         <li className="nav-item">
@@ -32,14 +32,14 @@ export default function Sidenav() {
             />
           </a>
         </li>
-        <li className="nav-item">
-          <a href="/busqueda" title="Búsqueda">
-            <img className="nav-link" src={search} alt="search" />
+        <li className="nav-item" style={{ marginTop: "250px" }}>
+          <a  title="Acerca de">
+            <img className="nav-link" src={question} alt="question" />
           </a>
         </li>
-        <li className="nav-item">
-          <a href="/ajustes" title="Ajustes">
-            <img className="nav-link" src={gear} alt="ajustes" />
+        <li className="nav-item" >
+          <a href="/" title="Log out">
+            <img className="nav-link" src={logout} alt="logout" />
           </a>
         </li>
       </ul>
