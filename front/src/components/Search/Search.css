@@ -100,3 +100,13 @@
   background: grey;
   transform: rotate(315deg);
 }
+@media (max-width: 650px) {
+  .buscar:hover input {
+    margin-left: 60px;
+    width: 250px;
+  }
+  
+  .buscar input:focus {
+    width: 250px;
+  }
+}
