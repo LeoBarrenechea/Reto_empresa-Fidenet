@@ -6,13 +6,20 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react';
 import Header from '../Header/Header';
+import { makeStyles } from '@material-ui/core';
 
+
+const useStyles = makeStyles(theme => ({
+    contact: {
+        padding: theme.spacing(0, 0, 1, 0),
+    }
+}));
 
 export default function Home() {
+    const classes = useStyles();
 
-    useEffect(() => {
-        AOS.init({ duration: 1000 })
-    }, []);
+    AOS.init({ duration: 1000 })
+
 
     return (
         <>
@@ -135,7 +142,7 @@ export default function Home() {
 
             <div className="finalBox">
                 <h1>Suscríbete</h1>
-                <h2 id='contact'>Contacta con nosotros</h2>
+                <h2 className={classes.contact} id='contact'>Contacta con nosotros</h2>
             </div>
             {/* 
             <div data-aos='fade-down'>

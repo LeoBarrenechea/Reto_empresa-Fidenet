@@ -108,11 +108,6 @@ export default function Login()
         })
     }, [username, password])
 
-    function CheckParam()
-    {
-
-    }
-
     async function ClickButton()
     {
         setIsLoading(true);
@@ -132,11 +127,11 @@ export default function Login()
         if (data)
         {
             console.log(isLoading);
+            if (data.access_token && isLoading)
+                navigate('/search');
             setIsLoading(false);
-            if (data.access_token)
-            navigate('/search');
         }
-    }, [data])
+    }, [data, isLoading])
 
     return (
         <>
@@ -165,7 +160,7 @@ export default function Login()
                       }
                     ></InputBase>
                 </div>
-                {!isLoading ? <LoadingButton id='botton-primary' onClick={ClickButton} size='small' variant="text">Login</LoadingButton> : <LoadingButton id='botton-primary' size='small' loading variant="text" >Login</LoadingButton>}
+                {!isLoading ? <LoadingButton id='botton-primary' onClick={ClickButton} size='small' variant="text">Login</LoadingButton> : <LoadingButton id='botton-primary' size='small' disabled disableElevation variant="contained">Loading...</LoadingButton>}
                 <div className={classes.register}>
                     <Typography className={classes.typ}>¿aun no estas registrado?</Typography>
                     <div className='borderCreate'>
