@@ -1,21 +1,29 @@
 .navbar {
-  background: linear-gradient(to right, #FFC12F, #FF982F);
-  opacity: 0.8;
+  background: linear-gradient(to right, #ffc12f, #ff982f);
   height: 50px;
-  transition: opacity 0.5s ease-in-out;
 }
 
-.navbar-scrolled {
-  background-color: rgb(255, 255, 255,1);
+.navbar.bg-transparent {
+  background-color: transparent !important;
 }
+.navbar.bg-transparent .nav-link {
+  color: black;
+  opacity: 0.8;
+}
+
+
+.navbar.bg-body-tertiary {
+opacity: 0.5;
+}
+
 
 .navbar-brand {
-  transform: scale(.5);
+  transform: scale(0.5);
   margin-left: -70px;
 }
 
 .nav-link {
-  color: black;
+  color: white;
 }
 .nav-item {
   display: flex;
@@ -23,16 +31,14 @@
   justify-content: flex-end;
 }
 
-.dropdown-item{
+.dropdown-item {
   margin-right: 100px;
 }
 
 @media (max-width: 1000px) {
   .navbar {
-    opacity: 0.75;
     height: 80px;
     margin-top: -15px;
-    
   }
   .navbar-toggler {
     background-color: #ffc12f;

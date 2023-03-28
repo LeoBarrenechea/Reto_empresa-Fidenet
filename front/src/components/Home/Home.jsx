@@ -83,7 +83,7 @@ export default function Home() {
                 <h1 data-aos='flip-down'>Con Smartketing tienes eso... ¡y mucho más!</h1>
             </div>
             
-            <div className="webInfo">
+            <div id='webInfo' className="webInfo">
                 <div className="webInfoBox" data-aos='flip-right'>
                 
                     <h1 className="infoBoxTitle">¿Qué es Smartketing?</h1>
