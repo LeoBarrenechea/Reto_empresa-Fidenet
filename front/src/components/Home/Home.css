@@ -253,10 +253,65 @@ img {
     
 }
 
+.logoBox h2 {
+    color: #173664;
+}
+
+.frontEndLogos{
+    display: flex;
+}
+
+.frontEndLogos img{
+    width: 17%;
+    
+}
+
+.logoBox img{
+    filter: grayscale(100%);
+}
+
+.logoBox img:hover{
+    filter: grayscale(0%);
+}
+
+.backEndLogos{
+    display: flex;
+}
+
+.backEndLogos img {
+    width: 17%;
+    transform: scale(0.7);
+}
+
+
+
 .infoBoxRow {
 display: flex;
 flex-direction: row;
+
 }
+
+.smartketingText {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.smartketingText h2 {
+    color: #173664;
+}
+
+.smartketingText p {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.infoBoxRow img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
 
 .infoBox {
     width: 50%;
