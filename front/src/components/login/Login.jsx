@@ -87,14 +87,16 @@ const useStyles = makeStyles(theme => ({
 
 export default function Login()
 {
-    if (localStorage.getItem('token'))
-    {
-        navigate('/search');
-    }
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (localStorage.getItem('token'))
+        {
+            navigate('/search');
+        }
+    },[])
     
     const { data, setData, setIsLoading, isLoading } = useContext(MyContext);
     const classes = useStyles();
-    const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [user, setUser] = useState({});
