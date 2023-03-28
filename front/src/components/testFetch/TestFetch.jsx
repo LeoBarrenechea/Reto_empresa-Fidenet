@@ -1,6 +1,9 @@
 import { useContext, useEffect } from "react";
 import ApiCall from "../apiCall/Apicall";
 import { MyContext } from "../myContext/MyContext";
+import Sunburst from "../graficos/Sunburst";
+import data1 from "../graficos/data"
+
 
 export default function TestFetch()
 {
@@ -12,6 +15,21 @@ export default function TestFetch()
     }, [])
         
     return (
+        <>
         <h1>testDatos</h1>
+        <Sunburst 
+        data={data1}
+        scale="linear"
+        tooltipContent={<div class="sunburstTooltip" style="position:absolute; color:'black'; z-index:10; background: #e2e2e2; padding: 5px; text-align: center;" />}
+        tooltip
+        tooltipPosition="right"
+        keyId="anagraph"
+        width="980"
+        height="900"
+        count_member="size"
+        font_size={8}
+        labelFunc={node => node.data.name}
+        />
+        </>
     )
 }
