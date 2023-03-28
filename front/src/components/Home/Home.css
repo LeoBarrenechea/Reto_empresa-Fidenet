@@ -327,23 +327,3 @@ flex-direction: row;
     align-items: center;
     padding-top: 10%;
 }
-
-#contact{
-    position: relative;
-}
-
-#contact::after{
-    content: '';
-    width: 8%;
-    height: 3px;
-    position: absolute;
-    background: linear-gradient(to right, #FFC12F, #FF982F);
-    bottom: 12%; left: 0%;
-    border-radius: 2px;
-    transition: all 0.7s ease-in-out;
-}
-
-#contact:hover::after{
-    right: 100%;
-    width: 100%;
-}

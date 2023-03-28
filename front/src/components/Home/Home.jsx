@@ -15,12 +15,20 @@ import logoMaterialui from '../images/materialui-logo.png'
 import logoNestjs from '../images/nestjs-logo.png'
 import logoMongodb from '../images/mongodb-logo.png'
 import logoAws from '../images/AWS-logo.png'
+import { makeStyles } from '@material-ui/core';
+
+
+const useStyles = makeStyles(theme => ({
+    contact: {
+        padding: theme.spacing(0, 0, 1, 0),
+    }
+}));
 
 export default function Home() {
+    const classes = useStyles();
 
-    useEffect(() => {
-        AOS.init({ duration: 1000 })
-    }, []);
+    AOS.init({ duration: 1000 })
+
 
     return (
         <>
@@ -177,6 +185,21 @@ export default function Home() {
                 </div>
 
             </div>
-        </>
+
+            <div className="finalBox">
+                <h1>Suscríbete</h1>
+                <h2 className={classes.contact} id='contact'>Contacta con nosotros</h2>
+            </div>
+            {/* 
+            <div data-aos='fade-down'>
+            <h1>FOOTER</h1>
+            <h1>FOOTER</h1>
+            <h1>FOOTER</h1>
+            <h1>FOOTER</h1>
+            <h1>FOOTER</h1>
+            
+            </div> */}
+        {/* </div> */}
+    </>
     )
 }

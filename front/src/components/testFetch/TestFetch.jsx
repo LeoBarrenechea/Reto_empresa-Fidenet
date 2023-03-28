@@ -10,9 +10,9 @@ export default function TestFetch()
     let {data, setData} = useContext(MyContext);
     useEffect(() => {
 
-        ApiCall({setData}, 'https://smartketing.onrender.com/tw_extraction/elon_musk')
+        ApiCall({setData}, 'https://smartketing.onrender.com/tw_extraction/athletic')
         console.log(data);
-    }, [data])
+    }, [])
         
     return (
         <>
