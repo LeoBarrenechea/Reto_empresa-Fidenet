@@ -161,10 +161,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="finalBox">
-                    <h1>Suscríbete</h1>
-                    <h2 id='contact'>Contacta con nosotros</h2>
-                </div>
+                
 
             </div>
 
