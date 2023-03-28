@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UsersService } from 'src/users/users.service';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class AuthService {
@@ -11,26 +12,41 @@ export class AuthService {
 
   async validateUser(username: string, pass: string): Promise<any> {
     const user = await this.usersService.mostrarUser(username);
-    console.log(user);
     
-    if (user && user.password === pass) {
+    if (!user)
+    {
+      console.log("no existe usuario");
+      return {msg: "no username"};
+    }
+    
+    const coincidence = bcrypt.compareSync(pass, user.password);
+    console.log(coincidence);
+    
+    if (user && coincidence) {
+      console.log("ambos coinciden");
       const { password, ...result } = user;
-
       return result;
     }
-    return null;
+
+    else if(!coincidence)
+      return {msg: "contraseña incorrecta"};
+    else
+      return null;
   }
   
   async login(user: any) {
     console.log(user);
-    const payload = { username: user.username, sub: user.userId };
-    console.log(payload);
-
-    const token = this.jwtService.sign(payload);
-
-    return {
-      user: payload,
-      access_token: token,
-    };
+    if (user.username)
+    {
+      const payload = { username: user.username, sub: user.userId };      
+      const token = this.jwtService.sign(payload);
+      
+      return {
+        user: payload,
+        access_token: token,
+      };
+    }
+    else
+      return user;
   }
 }

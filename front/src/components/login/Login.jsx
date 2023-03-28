@@ -87,6 +87,11 @@ const useStyles = makeStyles(theme => ({
 
 export default function Login()
 {
+    if (localStorage.getItem('token'))
+    {
+        navigate('/search');
+    }
+    
     const { data, setData, setIsLoading, isLoading } = useContext(MyContext);
     const classes = useStyles();
     const navigate = useNavigate();
@@ -94,6 +99,7 @@ export default function Login()
     const [password, setPassword] = useState('');
     const [user, setUser] = useState({});
     const [showPassword, setShowPassword] = useState(false);
+
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -107,11 +113,6 @@ export default function Login()
             password
         })
     }, [username, password])
-
-    function CheckParam()
-    {
-
-    }
 
     async function ClickButton()
     {
@@ -132,11 +133,15 @@ export default function Login()
         if (data)
         {
             console.log(isLoading);
+            if (data.access_token && isLoading)
+            {
+                console.log(data);
+                localStorage.setItem('token', data.access_token);
+                navigate('/search');
+            }
             setIsLoading(false);
-            if (data.access_token)
-            navigate('/search');
         }
-    }, [data])
+    }, [data, isLoading])
 
     return (
         <>
@@ -165,7 +170,7 @@ export default function Login()
                       }
                     ></InputBase>
                 </div>
-                {!isLoading ? <LoadingButton id='botton-primary' onClick={ClickButton} size='small' variant="text">Login</LoadingButton> : <LoadingButton id='botton-primary' size='small' loading variant="text" >Login</LoadingButton>}
+                {!isLoading ? <LoadingButton id='botton-primary' onClick={ClickButton} size='small' variant="text">Login</LoadingButton> : <LoadingButton id='botton-primary' size='small' disabled disableElevation variant="contained">Loading...</LoadingButton>}
                 <div className={classes.register}>
                     <Typography className={classes.typ}>¿aun no estas registrado?</Typography>
                     <div className='borderCreate'>
