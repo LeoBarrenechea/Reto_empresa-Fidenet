@@ -1,33 +1,35 @@
 import { makeStyles, Typography } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
 import logoF from '../../iconos-smartketing/f-logo.svg';
+import logoWhite from '../../iconos-smartketing/fidenet-logo-white.svg';
 
 const useStyle = makeStyles(theme => ({
     footer: {
-        marginTop: theme.spacing(10),
+        // marginTop: theme.spacing(10),
+        padding: theme.spacing(5, 5, 2,5),
         backgroundColor: '#181A1E',
         width: '100%',
         flexWrap: 'wrap',
     },
 
     typFooter: {
-        margin: theme.spacing(10, 5),
-        paddingBottom: theme.spacing(5),
+        // margin: theme.spacing(10, 5),
+        marginTop: '50px',
         display: 'flex',
         color: '#fff',
         justifyContent: 'space-between',
     },
 
     img: {
-        /* transform: 'scale(1)', */
         display: 'flex',
         justifyContent: 'center',
         alignContent: 'center',
-        marginLeft: theme.spacing(30),
+        
     },
 
     svg:{
-        width: '28%',
+        width: '160px',
+        
     }
 }));
 
@@ -39,10 +41,10 @@ export default function Footer()
     return (
         <footer className={classes.footer}>
             <div className={classes.img}>
-                    <img onClick={() => navigate ('/')} className={classes.svg} src={logoF}/>
+                    <img onClick={() => navigate ('/')} className={classes.svg} src={logoWhite}/>
             </div>
             <div className={classes.typFooter}>
-                <Typography>©Pablo, Jorge y Leonardo</Typography>
+                <Typography>© Pablo, Jorge y Leonardo</Typography>
                 <Typography>Reto empresa para Fidenet</Typography>
             </div>
         </footer>
