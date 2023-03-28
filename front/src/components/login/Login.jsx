@@ -87,13 +87,21 @@ const useStyles = makeStyles(theme => ({
 
 export default function Login()
 {
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (localStorage.getItem('token'))
+        {
+            navigate('/search');
+        }
+    },[])
+    
     const { data, setData, setIsLoading, isLoading } = useContext(MyContext);
     const classes = useStyles();
-    const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [user, setUser] = useState({});
     const [showPassword, setShowPassword] = useState(false);
+
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -128,7 +136,11 @@ export default function Login()
         {
             console.log(isLoading);
             if (data.access_token && isLoading)
+            {
+                console.log(data);
+                localStorage.setItem('token', data.access_token);
                 navigate('/search');
+            }
             setIsLoading(false);
         }
     }, [data, isLoading])

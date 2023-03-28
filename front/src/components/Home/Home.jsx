@@ -34,7 +34,7 @@ export default function Home() {
         <>
             <Header />
             <div className="homePage">
-                
+
                 <div className="fotoCabecera">
                     <div className="displayContainer" >
                         <h4 className="eslogan" data-aos='fade-right'>Analisis de datos de redes sociales en la palma de tu mano</h4>
@@ -176,7 +176,7 @@ export default function Home() {
                 <h1>Suscríbete</h1>
                 <h2 className={classes.contact} id='contact'>Contacta con nosotros</h2>
             </div>
-           
-    </>
+
+        </>
     )
 }
