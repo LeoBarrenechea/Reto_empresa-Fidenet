@@ -91,6 +91,7 @@ export default function Login()
     {
         navigate('/search');
     }
+    
     const { data, setData, setIsLoading, isLoading } = useContext(MyContext);
     const classes = useStyles();
     const navigate = useNavigate();
