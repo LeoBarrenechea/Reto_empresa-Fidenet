@@ -104,12 +104,8 @@ export default function Home() {
                             </div>
                         </div>
 
-
-
                     </div>
-                    {/* <div className="divFoto">
-                        <img className="fotoMovil" src={fotoMovil} alt='fotoMovil'></img>
-                    </div> */}
+                    
 
                     <div className="webInfoBox" data-aos='flip-right'>
                         <h1 className="infoBoxTitle">¿Qué datos se pueden visualizar?</h1>

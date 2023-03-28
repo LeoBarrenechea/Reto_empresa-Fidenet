@@ -253,12 +253,18 @@ img {
     
 }
 
+.logoBox {
+   text-align: center;
+}
+
 .logoBox h2 {
     color: #173664;
 }
 
 .frontEndLogos{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .frontEndLogos img{
@@ -268,6 +274,7 @@ img {
 
 .logoBox img{
     filter: grayscale(100%);
+    
 }
 
 .logoBox img:hover{
@@ -276,6 +283,8 @@ img {
 
 .backEndLogos{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .backEndLogos img {
