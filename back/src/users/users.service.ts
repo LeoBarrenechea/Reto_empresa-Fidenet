@@ -49,16 +49,7 @@ export class UsersService {
       await this.usersModel.updateOne({username: username}, {$set: {phoneNumber: data.phoneNumber}});
     if (data.birthday)
       await this.usersModel.updateOne({username: username}, {$set: {birthday: data.birthday}});
-    if (data.socialMedia.length > 0)
-      await this.usersModel.updateOne({username: username}, {$set: {socialMedia: data.socialMedia}});
     if (data.info)
-      await this.usersModel.updateOne({username: username}, {$set: {info: data.info}});
-    if (data.image)
-      await this.usersModel.updateOne({username: username}, {$set: {image: data.image}});
-    if (data.knowledges.length > 0)
-      await this.usersModel.updateOne({username: username}, {$set: {knowledges: data.knowledges}});
-    if (data.job)
-      await this.usersModel.updateOne({username: username}, {$set: {job: data.job}});
       
     return await this.usersModel.find({username: username});
   }
