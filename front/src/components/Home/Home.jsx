@@ -34,11 +34,8 @@ export default function Home() {
         <>
             <Header />
             <div className="homePage">
-                {/* <h2>hola, estás en Home</h2> */}
-                {/* <img src={foto2} alt='foto2'></img> */}
+                
                 <div className="fotoCabecera">
-                    {/* <img src={circuloData} alt='foto1'></img> */}
-
                     <div className="displayContainer" >
                         <h4 className="eslogan" data-aos='fade-right'>Analisis de datos de redes sociales en la palma de tu mano</h4>
                         <h2 className="somosSmartketing" data-aos='fade-right'>Somos Smartketing</h2>
@@ -48,24 +45,15 @@ export default function Home() {
                                 <li>innovación</li>
                                 <li>rapidez</li>
                                 <li>fiabilidad</li>
-                                {/* <li><h2>innovación</h2></li>
-                            <li><h2>rapidez</h2></li>
-                        <li><h2>fiabilidad</h2></li> */}
                             </ul>
                         </div>
                         <h2 className="eslogan" data-aos='fade-right'>Tu aliado digital</h2>
                         <h2 className="title" data-aos='fade-right'>¡Bienvenid@ a Smartketing BETA!</h2>
-
-
-
-
-
                     </div>
                 </div>
 
                 <div className="primeraFoto" >
                     <img src={circuloData} alt='foto cabecera'></img>
-
                 </div>
 
                 <div className="containerQuestion" data-aos='fade-down'>
@@ -76,16 +64,15 @@ export default function Home() {
                         <h1 data-aos='fade-down'>Instagram</h1>
                         <h1 data-aos='fade-down'>YouTube</h1>
                     </div>
-
                     <h1 className="textQuestion" data-aos='fade-down'>...en la palma de tu mano?</h1>
                 </div>
 
                 <div className="gradientBox">
-
+                    {/* DIV VACIO PARA EL DEGRADADO */}
                 </div>
 
                 <div className="containerResponse" data-aos='fade-up'>
-                    <img src={mapa} alt='foto pantalla'></img>
+                    <img src={mapa} alt='persona mirando la pantalla'></img>
                 </div>
 
                 <div className="containerResponse">
@@ -94,7 +81,6 @@ export default function Home() {
 
                 <div className="webInfo">
                     <div className="webInfoBox" data-aos='flip-right'>
-
                         <h1 className="infoBoxTitle">¿Qué es Smartketing?</h1>
                         <div className="infoBoxRow">
                             <div className="smartketingText">
@@ -190,16 +176,7 @@ export default function Home() {
                 <h1>Suscríbete</h1>
                 <h2 className={classes.contact} id='contact'>Contacta con nosotros</h2>
             </div>
-            {/* 
-            <div data-aos='fade-down'>
-            <h1>FOOTER</h1>
-            <h1>FOOTER</h1>
-            <h1>FOOTER</h1>
-            <h1>FOOTER</h1>
-            <h1>FOOTER</h1>
-            
-            </div> */}
-        {/* </div> */}
+           
     </>
     )
 }
