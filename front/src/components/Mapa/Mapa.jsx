@@ -1,4 +1,5 @@
 //npm install react-leaflet --legacy-peer-deps
+//npm install react react-dom leaflet
 
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
@@ -19,12 +20,12 @@ import "./Mapa.css";
 
 export default function Mapa() {
   return (
-    <div>
+    <div className="mapa">
       <MapContainer
         center={[0, 0]}
         zoom={2}
         scrollWheelZoom={false}
-        className="mapa"
+        
       >
         <TileLayer
         //   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
