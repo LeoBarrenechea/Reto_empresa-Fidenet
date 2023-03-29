@@ -3,6 +3,9 @@ import ApiCall from "../apiCall/Apicall";
 import { MyContext } from "../myContext/MyContext";
 import Sunburst from "../graficos/Sunburst";
 import data1 from "../graficos/data"
+import Mapa from "../Mapa/Mapa";
+import Lineas from "../Lineas/Lineas"
+
 
 
 export default function TestFetch()
@@ -30,6 +33,8 @@ export default function TestFetch()
         font_size={8}
         labelFunc={node => node.data.name}
         />
+        <Lineas />
+        <Mapa/>
         </>
     )
 }

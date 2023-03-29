@@ -1,4 +1,5 @@
 //npm install react-leaflet --legacy-peer-deps
+//npm install react react-dom leaflet
 
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
