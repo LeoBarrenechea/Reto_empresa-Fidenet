@@ -97,8 +97,8 @@ var misoptions = {
 
 export default function Lineas() {
   return (
-    <div className="container">
-      <Line data={midata} options={misoptions} height={800} width={1800} />
+    <div >
+      <Line data={midata} options={misoptions} className="container"/>
     </div>
   );
 }

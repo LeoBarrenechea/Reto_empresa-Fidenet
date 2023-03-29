@@ -5,6 +5,7 @@ import Sunburst from "../graficos/Sunburst";
 import data1 from "../graficos/data"
 import Mapa from "../Mapa/Mapa";
 import Lineas from "../Lineas/Lineas"
+import Sidenav from "../Sidenav/Sidenav";
 
 
 
@@ -19,6 +20,7 @@ export default function TestFetch()
         
     return (
         <>
+        <Sidenav z-index="99"/>
         <h1>testDatos</h1>
         <Sunburst 
         data={data1}
