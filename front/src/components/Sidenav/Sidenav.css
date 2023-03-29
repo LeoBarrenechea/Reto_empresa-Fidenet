@@ -11,6 +11,10 @@
  text-align: center;
 }
 
+.nav-item{
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
   .sidenav {
     width: 50px;
