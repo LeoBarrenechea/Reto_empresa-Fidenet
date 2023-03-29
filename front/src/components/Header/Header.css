@@ -3,7 +3,7 @@
   height: 50px;
 }
 
-.navbar.bg-transparent {
+/* .navbar.bg-transparent {
   background-color: transparent !important;
 }
 .navbar.bg-transparent .nav-link {
@@ -14,7 +14,7 @@
 
 .navbar.bg-body-tertiary {
 opacity: 0.5;
-}
+} */
 
 
 .navbar-brand {
@@ -23,7 +23,7 @@ opacity: 0.5;
 }
 
 .nav-link {
-  color: white;
+  color: black;
 }
 .nav-item {
   display: flex;
