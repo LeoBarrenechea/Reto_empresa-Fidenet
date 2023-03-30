@@ -7,8 +7,6 @@ import Mapa from "../Mapa/Mapa";
 import Lineas from "../Lineas/Lineas"
 import Sidenav from "../Sidenav/Sidenav";
 
-
-
 export default function TestFetch()
 {
     let {data, setData} = useContext(MyContext);
@@ -20,7 +18,7 @@ export default function TestFetch()
         
     return (
         <>
-        <Sidenav z-index="99"/>
+        <Sidenav />
         <h1>testDatos</h1>
         <Sunburst 
         data={data1}
@@ -29,14 +27,14 @@ export default function TestFetch()
         tooltip
         tooltipPosition="right"
         keyId="anagraph"
-        width="980"
-        height="900"
+        width="480"
+        height="400"
         count_member="size"
         font_size={8}
         labelFunc={node => node.data.name}
         />
         <Lineas />
-        <Mapa/>
+        <Mapa />
         </>
     )
 }

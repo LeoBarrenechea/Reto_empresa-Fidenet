@@ -74,6 +74,7 @@ var misoptions = {
   scales: {
     y: {
       min: -10,
+      max: 10,
       ticks:{
         callback: function(value, index){
             if(value===10){

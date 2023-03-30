@@ -16,7 +16,7 @@ export default function Sidenav() {
   };
 
   return (
-    <div className="position-fixed sidenav">
+    <div className={`position-fixed sidenav `}>
       <ul className="nav flex-column ">
         <li className="nav-item">
           <a href="/" title="FIDENET">
@@ -29,17 +29,17 @@ export default function Sidenav() {
           </a>
         </li>
         <li className="nav-item">
-          <a href="/documentos" title="Documentos">
+          <a href="/test" title="Documentos">
             <img className="nav-link" src={document} alt="documents" />
           </a>
         </li>
-        <li className="nav-item" style={{ marginTop: "250px" }}>
+        <li className="nav-item" >
           <a onClick={handleQuestionClick} title="Como funciona">
             <img className="nav-link" src={question} alt="question" />
           </a>
         </li>
         <li className="nav-item">
-          <a href="/" title="Log out">
+          <a href="/" title="Log out" onClick={()=>localStorage.removeItem("token")}>
             <img className="nav-link" src={logout} alt="logout" />
           </a>
         </li>

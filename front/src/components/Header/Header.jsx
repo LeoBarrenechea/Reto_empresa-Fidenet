@@ -1,31 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import logoHuella from "../../iconos-smartketing/logo-white.svg";
 import "../Header/Header.css";
-import { useEffect, useState } from "react";
 
 export default function Header() {
   const navigate = useNavigate();
-  const [isTransparent, setIsTransparent] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.pageYOffset === 0) {
-        setIsTransparent(true);
-      } else {
-        setIsTransparent(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div className="fixed-top">
       <nav
-        className={`navbar navbar-expand-lg ${isTransparent ? "bg-transparent" : "bg-body-tertiary"
-          }`}
+        className={`navbar navbar-expand-lg`}
       >
         <div className="container-fluid">
           <a href="/">
@@ -49,12 +32,12 @@ export default function Header() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
+              <li className="nav-itemHeader">
                 <a className="nav-link" aria-current="page" href="#webInfo">
                   ¿Qué es Smartketing?
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-itemHeader">
                 <a className="nav-link" href="/login">
                   Log in
                 </a>
