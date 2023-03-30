@@ -5,6 +5,14 @@ import Sunburst from "../graficos/Sunburst";
 import FilterData from "../filterData/FilterData";
 /* import data from "../graficos/data";
  */export default function TestFetch()
+import data1 from "../graficos/data"
+import Mapa from "../Mapa/Mapa";
+import Lineas from "../Lineas/Lineas"
+import Sidenav from "../Sidenav/Sidenav";
+
+
+
+export default function TestFetch()
 {
     let {data, setData, setMentions, mentions,setType,setProbability, probability, type} = useContext(MyContext);
 
@@ -31,6 +39,7 @@ import FilterData from "../filterData/FilterData";
         
     return (
         <>
+        <Sidenav z-index="99"/>
         <h1>testDatos</h1>
         {
             data ?
