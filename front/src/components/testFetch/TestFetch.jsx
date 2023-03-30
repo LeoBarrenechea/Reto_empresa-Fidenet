@@ -10,8 +10,6 @@ import Mapa from "../Mapa/Mapa";
 import Lineas from "../Lineas/Lineas"
 import Sidenav from "../Sidenav/Sidenav";
 
-
-
 export default function TestFetch()
 {
     let {data, setData, setMentions, mentions,setType,setProbability, probability, type} = useContext(MyContext);
@@ -39,25 +37,23 @@ export default function TestFetch()
         
     return (
         <>
-        <Sidenav z-index="99"/>
+        <Sidenav />
         <h1>testDatos</h1>
-        {
-            data ?
-            <Sunburst 
-            data={data[0]}
-            scale="linear"
-            tooltipContent={<div class="sunburstTooltip" style="position:absolute; color:'black'; z-index:10; background: #e2e2e2; padding: 5px; text-align: center;" />}
-            tooltip
-            tooltipPosition="right"
-            keyId="anagraph"
-            width="1000"
-            height="900"
-            count_member="probability"
-            font_size={12}
-            labelFunc={node => node.data[0]}
-            />
-            : <></>
-        }
-    </>
+        <Sunburst 
+        data={data1}
+        scale="linear"
+        tooltipContent={<div class="sunburstTooltip" style="position:absolute; color:'black'; z-index:10; background: #e2e2e2; padding: 5px; text-align: center;" />}
+        tooltip
+        tooltipPosition="right"
+        keyId="anagraph"
+        width="480"
+        height="400"
+        count_member="size"
+        font_size={8}
+        labelFunc={node => node.data.name}
+        />
+        <Lineas />
+        <Mapa />
+        </>
     )
 }
