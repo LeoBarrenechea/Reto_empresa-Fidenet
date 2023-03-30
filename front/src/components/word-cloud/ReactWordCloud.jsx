@@ -31,7 +31,7 @@ export default function ReactWordCloud() {
       <div
         style={{
           height: "70vh",
-          width: "33vw",
+          width: "25vw",
           backgroundColor: "white",
           display: "flex",
           justifyContent: "center",
