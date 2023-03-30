@@ -53,6 +53,28 @@ export class UsersService {
       
     return await this.usersModel.find({username: username});
   }
+
+  async updateSearches(data:any){
+    console.log(data.username);
+    console.log(data.search);
+
+    if (data.search && data.username)
+    {
+      let user = await this.usersModel.find({username: data.username})
+      
+      if (!user || (user[0].searches.length >= 3 && user[0].typeAcc === 'free'))
+      {
+        return null;
+      }
+
+      else
+      {
+        await this.usersModel.updateOne({username: data.username}, {$push: {searches: data.search}})
+        return user;
+      }
+    }
+    
+  }
 }
 
 

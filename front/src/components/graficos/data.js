@@ -1,8 +1,8 @@
 export default {
-    "name": "flare",
+    "name": "Athletic Club de Bilbao",
     "children": [
         {
-            "name": "analytics",
+            "name": "Copa del Rey",
             "children": [
                 {
                     "name": "cluster",
