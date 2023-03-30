@@ -110,8 +110,8 @@ li {
 }
 
 .containerRRSS {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .containerRRSS h1 {
@@ -121,12 +121,16 @@ li {
 }
 
 .textQuestion {
-
+    /* margin-top: 50px; */
     background: linear-gradient(to bottom, #36D0FF, #486CFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0.4px #FFC12F;
 
+}
+
+.textQuestionEmpty {
+    margin-top: 20px;
 }
 
 
@@ -357,8 +361,8 @@ flex-direction: row;
 }
 
 .sunburstFoto {
-    margin-top: 28px;
-    margin-left: 175px;
+    margin-top: 33px;
+    margin-left: 45px;
     width: 30%;
 }
 
