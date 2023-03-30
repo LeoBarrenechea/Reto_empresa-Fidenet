@@ -2,7 +2,7 @@
     align-items: center;
     width: 80%;
     height: 350px;
-    z-index: 40;
+    /* z-index: 40; */
 }
 
 #map-container {
