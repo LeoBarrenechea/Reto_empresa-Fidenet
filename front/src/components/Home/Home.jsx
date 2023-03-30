@@ -69,6 +69,7 @@ export default function Home() {
                         <h1 data-aos='fade-down'>YouTube</h1>
                     </div>
                     <h1 className="textQuestion" data-aos='fade-down'>...en la palma de tu mano?</h1>
+                    <div className="textQuestionEmpty"></div>
                 </div>
 
                 <div className="gradientBox">

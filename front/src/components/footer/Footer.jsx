@@ -15,7 +15,7 @@ const useStyle = makeStyles(theme => ({
 
     typFooter: {
         // margin: theme.spacing(10, 5),
-        marginTop: '50px',
+        marginTop: '80px',
         display: 'flex',
         color: '#fff',
         justifyContent: 'space-between',
@@ -84,8 +84,8 @@ export default function Footer() {
                 </div>
             </div>
             <div className={classes.typFooter}>
-                <Typography>© Pablo, Jorge y Leonardo</Typography>
-                <Typography>Reto empresa para Fidenet</Typography>
+                <Typography>© 2023 Pablo, Jorge, Leonardo</Typography>
+                <Typography>Reto de empresa para Fidenet</Typography>
             </div>
         </footer>
     )

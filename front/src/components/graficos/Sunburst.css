@@ -1,0 +1,26 @@
+.sunburstCard {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 550px;
+    width: 600px;
+    /* margin-top: 40px; */
+    margin-left: 120px;
+    background-color: red;
+
+  }
+
+.sunburstDisplay {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* background-color: blue; */
+    height: 550px;
+    width: 600px;
+}
+
+.sunburstTitle {
+  padding-top: 30px;
+}
