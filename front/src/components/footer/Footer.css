@@ -1,0 +1,34 @@
+.footerInfo {
+    margin-top: 80px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerInfo h5 {
+    margin-bottom: 20px;
+}
+
+.footerInfo p {
+    margin-bottom: 0px;
+}
+
+.contactosInfo p:hover {
+    cursor: pointer;
+    color: #FF982F;
+}
+
+.rrssInfo p:hover {
+    cursor: pointer;
+    color: #FF982F;
+}
+
+.politicaInfo p:hover {
+    cursor: pointer;
+    color: #FF982F;
+}
+
+.ayudaInfo p:hover {
+    cursor: pointer;
+    color: #FF982F;
+}

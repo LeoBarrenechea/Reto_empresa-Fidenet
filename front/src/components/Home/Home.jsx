@@ -5,6 +5,12 @@ import fotoMovil from '../images/iphoneversion.PNG';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Header from '../Header/Header';
+import sunburstApp from '../images/sunburstApp.PNG'
+import wordCloudApp from '../images/wordCloudApp.PNG'
+import sentimientosApp from '../images/sentimientosApp.PNG'
+import mapaApp from '../images/mapaApp.PNG'
+import sentimientosMapaApp from '../images/sentimientosMapaApp.PNG'
+import usuariosApp from '../images/usuariosApp.PNG'
 import logoHtml from '../images/html5-logo.jpg'
 import logoJs from '../images/javascript-logo.jpg'
 import logoCss from '../images/css3-logo.jpg'
@@ -33,7 +39,6 @@ export default function Home() {
         <>
             <Header />
             <div className="homePage">
-
                 <div className="fotoCabecera">
                     <div className="displayContainer" >
                         <h4 className="eslogan" data-aos='fade-right'>Analisis de datos de redes sociales en la palma de tu mano</h4>
@@ -59,8 +64,8 @@ export default function Home() {
                     <h1 className="textQuestion" data-aos='fade-down'>¿Te gustaría tener el acceso a lo que opina la gente en...</h1>
                     <div className="containerRRSS">
                         <h1 data-aos='fade-down'>Twitter</h1>
-                        <h1 data-aos='fade-down'>Facebook</h1>
                         <h1 data-aos='fade-down'>Instagram</h1>
+                        <h1 data-aos='fade-down'>Facebook</h1>
                         <h1 data-aos='fade-down'>YouTube</h1>
                     </div>
                     <h1 className="textQuestion" data-aos='fade-down'>...en la palma de tu mano?</h1>
@@ -83,7 +88,7 @@ export default function Home() {
                         <h1 className="infoBoxTitle">¿Qué es Smartketing?</h1>
                         <div className="infoBoxRow">
                             <div className="smartketingText">
-                                <h2>App</h2>
+                                <h2>Smartketing App</h2>
                                 <p>
                                     Smartketing es una herramienta que muestra mediante el análisis de datos la repercusión de una palabra en las
                                     redes sociales desglosados por sentimientos, país, red social, etc.
@@ -104,20 +109,38 @@ export default function Home() {
                         </div>
 
                     </div>
-                    
+
 
                     <div className="webInfoBox" data-aos='flip-right'>
                         <h1 className="infoBoxTitle">¿Qué datos se pueden visualizar?</h1>
+                        <div className="datosText">
                         <p>
                             Dentro de la App dispondremos de diversos gráficos que nos proporcionaran información sobre las palabras que busquemos.
                         </p>
-                        <ul>
-                            <li>✓ Nube de palabras con las más usadas y color según sentimiento asociado</li>
-                            <li>✓ Mapa con zonas calientes con filtro por fechas y zoom a áreas</li>
-                            <li>✓ Hashtags más usados y los relacionados</li>
-                            <li>✓ Cuentas de usuarios que han escrito sobre el tema y su relevancia</li>
-                            <li>✓ Variación de los sentimientos sobre el tema según un rango de tiempo</li>
-                        </ul>
+
+                        </div>
+                        <div className="infoBoxRow">
+
+                            <ul className="listaGraficos">
+                                <li>✓  Nube de palabras con las más usadas y color según sentimiento asociado</li>
+                                <li>✓  Hashtags más usados y los relacionados</li>
+                                <li>✓  Variación de los sentimientos sobre el tema según un rango de tiempo</li>
+                                <li>✓  Mapa con zonas calientes con filtro por fechas y zoom a áreas</li>
+                                <li>✓  Cuentas de usuarios que han escrito sobre el tema y su relevancia</li>
+                            </ul>
+                            <div className="sunburstFoto">
+                                
+                                <img src={wordCloudApp} alt='foto wordCloud'></img>
+
+                            </div>
+                        </div>
+                        <div className="appFotos" >
+                        <img src={sunburstApp} alt='foto sunburst'></img>
+                            <img src={sentimientosMapaApp} alt='foto sentimientosMapa'></img>
+                            <img src={usuariosApp} alt='foto usuarios'></img>
+                            {/* <img src={sentimientosApp} alt='foto sentimientos'></img>
+                            <img src={mapaApp} alt='foto mapa'></img> */}
+                        </div>
                     </div>
 
                     <div className="webInfoBox" data-aos='flip-right'>
@@ -155,12 +178,16 @@ export default function Home() {
                     <div className="webInfoBox" data-aos='flip-right'>
                         <h1 className="infoBoxTitle">¿Cómo funciona?</h1>
                         <p>
-                            Tenemos una gran base de datos con información recopilada por una IA, por lo tanto, podrás
+                            Disponemos de una IA que recoge toda la información posible que encuentra en redes sociales y la almacena en nuestra base de datos de AWS. Esto facilita el almacenaje de la información gracias a la automatización que hemos hecho para su recopilación.
+                        </p>
+
+                        <p>
+                            Trás esto, nos encargamos de filtrar los datos en función de las necesidades y proporcionamos las estadisticas necesarias mediante gráficos interactivos.
                         </p>
                     </div>
                 </div>
 
-                
+
 
             </div>
 
