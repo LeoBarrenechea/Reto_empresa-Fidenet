@@ -24,7 +24,7 @@ export default function Mapa() {
     <div id="map-container">
       <MapContainer
         center={[40, 0]}
-        zoom={3}
+        zoom={2}
         scrollWheelZoom={false}
         className="mapa"
       >

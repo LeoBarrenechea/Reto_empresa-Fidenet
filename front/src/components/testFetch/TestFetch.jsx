@@ -9,9 +9,11 @@ import FilterData from "../filterData/FilterData";
 import data1 from "../graficos/data"
 import ReactWordCloudCard from "../word-cloud/ReactWordCloudCard"
 import SunburstCard from "../graficos/SunburstCard";
+import LineasCard from "../Lineas/LineasCard"
+import MapaCard from "../Mapa/MapaCard"
 
 import Mapa from "../Mapa/Mapa";
-import Lineas from "../Lineas/Lineas"
+// import Lineas from "../Lineas/Lineas"
 import Sidenav from "../Sidenav/Sidenav";
 
 
@@ -40,7 +42,7 @@ export default function TestFetch() {
         if (mentions.length > 0)
             console.log(mentions[0].probability);
     }, [mentions])
-    
+
     useEffect(() => {
         if (type !== '')
             console.log(probability)
@@ -49,13 +51,18 @@ export default function TestFetch() {
     return (
         <>
             <Sidenav />
-            <h1>testDatos</h1>
-            <div className="row1">
-                <SunburstCard />
-                <ReactWordCloudCard />
+            <div className="wordPage">
+                <h1 className="searchWord">Palabra</h1>
+                <div className="row">
+                    <SunburstCard />
+                    <ReactWordCloudCard />
+                </div>
+                <div className="column">
+                    <LineasCard />
+                    <MapaCard />
+
+                </div>
             </div>
-            <Lineas />
-            <Mapa />
         </>
     )
 }
