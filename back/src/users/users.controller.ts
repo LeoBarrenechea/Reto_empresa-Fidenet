@@ -72,4 +72,24 @@ export class UsersController {
       
       }
   }
+
+  @UseGuards(AuthGuard('jwt'))
+  @Put('updatesearch')
+  async updateSearch(@Body() data: any){
+    
+    let user = await this.usersService.updateSearches(data);
+  console.log(user);
+      
+    if (!user || user[0].searches.length >= 1)
+    {
+      return {msg: 'no guardado'};
+    }
+    else if (user[0].searches.length >= 3)
+    {
+      return {msg: 'no guardado por exceso de busquedas'};
+    }
+    else{
+      return {msg: 'exitosamente guardado'};
+    }
+  }
 }
