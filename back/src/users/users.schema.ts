@@ -4,35 +4,11 @@ export type UserDocument = User & Document;
 
 @Schema()
 export class User {
-    @Prop({ required: true })
-    name: string;
-
-    @Prop({ required: true })
-    surname: string;
+    @Prop()
+    searches: string[];
 
     @Prop()
-    phoneNumber: string;
-
-    @Prop()
-    birthday: string;
-    
-    @Prop()
-    socialMedia: string[];
-    
-    @Prop()
-    info: string;
-    
-    @Prop()
-    knowledges: string[];
-
-    @Prop()
-    job: string;
-
-    @Prop()
-    image: string; 
-    
-    @Prop({ unique: true, required: true })
-    email: string;
+    typeAcc: string;
     
     @Prop({ required: true, unique: true })
     username: string;

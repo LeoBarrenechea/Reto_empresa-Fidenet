@@ -4,7 +4,6 @@ import circuloData from '../images/circulodata.jpg';
 import fotoMovil from '../images/iphoneversion.PNG';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { useEffect } from 'react';
 import Header from '../Header/Header';
 import sunburstApp from '../images/sunburstApp.PNG'
 import wordCloudApp from '../images/wordCloudApp.PNG'
@@ -33,7 +32,7 @@ const useStyles = makeStyles(theme => ({
 export default function Home() {
     const classes = useStyles();
 
-    AOS.init({ duration: 1000 })
+    AOS.init({ duration: 900 })
 
 
     return (

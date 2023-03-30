@@ -27,6 +27,7 @@ const useStyles = makeStyles(theme => ({
         color: '#fff',
         margin: 'auto',
         marginTop: theme.spacing(22),
+        marginBottom: theme.spacing(15),
         padding: theme.spacing(10),
         paddingTop: theme.spacing(13),
         display: 'flex',
@@ -143,7 +144,7 @@ export default function Login()
             }
             setIsLoading(false);
         }
-    }, [data, isLoading])
+    }, [data])
 
     return (
         <>
