@@ -12,9 +12,10 @@ import "./Mapa.css";
 // let iconUbicacion = new L.icon({
 //   iconUrl: icon,
 //   iconShadow: iconShadow,
-//   iconSize: [30,25],
+//   iconSize: [20,25],
 //   iconAnchor:[20,90],
-//   shadowAnchor:
+//   shadowAnchor: [20,90],
+//   popupAncho: [-3,-75]
 // })
 
 
