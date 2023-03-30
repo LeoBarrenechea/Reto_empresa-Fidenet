@@ -74,8 +74,21 @@ var misoptions = {
   scales: {
     y: {
       min: -10,
+      max: 10,
+      ticks:{
+        callback: function(value, index){
+            if(value===10){
+                return "Positivo"
+            } else if (value===0){
+                return "Neutro"
+            } else if(value===-10){
+                return "Negativo"
+            }
+        }
+      }
     },
   },
+
   plugins: {
     legend: {
       display: true,
@@ -83,10 +96,10 @@ var misoptions = {
   },
 };
 
-export default function LineChart() {
+export default function Lineas() {
   return (
-    <div className="container">
-      <Line data={midata} options={misoptions} height={800} width={1800} />;
+    <div >
+      <Line data={midata} options={misoptions} className="container"/>
     </div>
   );
 }

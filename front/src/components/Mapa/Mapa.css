@@ -1,4 +1,12 @@
 .mapa{
-    width: 1000px;
-    height: 600px;
+    align-items: center;
+    width: 80%;
+    height: 350px;
+    z-index: 40;
+}
+
+#map-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }

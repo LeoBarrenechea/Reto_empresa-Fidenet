@@ -24,10 +24,11 @@ import { transition as d3Transition } from "d3-transition";
  * text opacity -- https://gist.github.com/metmajer/5480307
  */
 
+
 /**
 * Creates a zoomable Sunburst
 * @param {object} props
-* @param {object} props.data - see the d3 {@link https://github.com/defunctzombie/d3-examples/blob/master/dendrogram/flare.json|flare.json}
+* @param {array} props.data - see the d3 {@link https://github.com/defunctzombie/d3-examples/blob/master/dendrogram/flare.json|flare.json}
     data for the shape that is required. 
 * @param {string} props.width - width of svg
 * @param {string} props.height - height of svg. 

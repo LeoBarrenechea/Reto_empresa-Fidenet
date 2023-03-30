@@ -1,13 +1,16 @@
 .sidenav {
   background: linear-gradient(to bottom, #36d0ff, #486cff);
-  width: 70px;
+  width: 60px;
   height: 100vh;
+}
+.sidenav ul li a {
+  width: 40px; 
 }
 
 .nav-link {
  padding: 5px 5px;
  position: relative;
- margin: 15px;
+ margin: 15px 8px;
  text-align: center;
 }
 
@@ -26,3 +29,12 @@
     margin-right: 10px;
   }
 }
+
+/*Para que queden los dos ultimos iconos abajo */
+.nav-item:last-child {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+
