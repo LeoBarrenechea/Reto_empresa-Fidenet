@@ -4,7 +4,7 @@ import { MyContext } from "../myContext/MyContext";
 import Sunburst from "../graficos/Sunburst";
 import FilterData from "../filterData/FilterData";
 /* import data from "../graficos/data";
- */export default function TestFetch()
+ */
 import data1 from "../graficos/data"
 import Mapa from "../Mapa/Mapa";
 import Lineas from "../Lineas/Lineas"
