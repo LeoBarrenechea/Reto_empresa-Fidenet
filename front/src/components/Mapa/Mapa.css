@@ -1,5 +1,41 @@
 .mapa{
-    margin-left: 80px;
-    width: 450px;
-    height: 200px;
+    align-items: center;
+    width: 80%;
+    height: 350px;
+    /* z-index: 40; */
 }
+
+#map-container {
+    width: 1400px;
+    height: 400px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.mapaCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 400px;
+    width: 1040px;
+    margin-top: 125px;
+    margin-left: 0px;
+    background-color: red;
+  
+  }
+  
+  .mapaDisplay {
+    height: 400px;
+    width: 1040px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+    margin-bottom: 40px;
+  }
+  
+  .mapaTitle {
+    padding-top: 30px;
+  }

@@ -1,0 +1,35 @@
+.wordCloudCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 400px;
+  width: 435px;
+  margin-top: 20px;
+  margin-left: 30px;
+
+}
+
+.wordCloudDisplay {
+  height: 400px;
+  width: 435px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: blue; */
+  margin-bottom: 40px;
+}
+
+.wordCloudTitle {
+  padding-top: 30px;
+}
+
+/* colors: [
+          "#FFC12F",
+          "#FF8100",
+          "#E3A105",
+          "#082188",
+          "#36D0FF",
+          "#486CFF",
+          "#D63749"
+        ], */
