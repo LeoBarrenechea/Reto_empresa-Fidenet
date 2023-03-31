@@ -1,5 +1,5 @@
 .sidenav {
-  background: linear-gradient(to bottom, #36d0ff, #486cff);
+  background: linear-gradient(to bottom, #ffffff, #ffffff);
   width: 60px;
   height: 100vh;
 }
@@ -12,7 +12,18 @@
  position: relative;
  margin: 15px 8px;
  text-align: center;
+ transform: scale(0.75);
 }
+
+.nav-logo {
+  padding-top: 28px;
+  padding-bottom: 30px;
+  /* padding: 5px 5px; */
+  position: relative;
+  margin: 15px 8px;
+  text-align: center;
+  transform: scale(1.5);
+ }
 
 .nav-item{
   cursor: pointer;
