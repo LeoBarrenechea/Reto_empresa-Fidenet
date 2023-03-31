@@ -2,8 +2,9 @@ import React from "react";
 import ReactCloud from "react-wordcloud";
 
 import words from "./words";
+import Athletic from "./Athletic";
 
-export default function ReactWordCloud() {
+export default function ReactWordCloud({SearchInput}) {
 
     const options = {
       colors: [
@@ -30,7 +31,7 @@ export default function ReactWordCloud() {
     return (
       <div
         style={{
-          height: "70vh",
+          height: "65vh",
           width: "25vw",
           backgroundColor: "white",
           display: "flex",
@@ -39,7 +40,7 @@ export default function ReactWordCloud() {
           textAlign: "center"
         }}
       >
-        <ReactCloud words={words} options={options} />
+        <ReactCloud words={Athletic} options={options} />
       </div>
     );
   }
