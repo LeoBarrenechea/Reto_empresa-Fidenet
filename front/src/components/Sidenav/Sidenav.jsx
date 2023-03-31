@@ -22,7 +22,7 @@ export default function Sidenav() {
       <ul className="nav flex-column ">
         <li className="nav-item">
           <a href="/" title="FIDENET">
-            <img className="nav-link" src={logo} alt="logo" />
+            <img className="nav-logo" src={logo} alt="logo" />
           </a>
         </li>
         <li className="nav-item">
