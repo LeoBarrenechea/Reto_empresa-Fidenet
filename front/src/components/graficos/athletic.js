@@ -1,5 +1,5 @@
 export default {
-  name: "Athletic Club de Bilbao",
+  name: "AthleticClubdeBilbao",
   children: [
     {
       name: "Copa del Rey",
@@ -30,3 +30,8 @@ export default {
     },
   ],
 };
+
+// ARRAY PARA LOS GRAFICOS DE LINEAS
+// var CopaDelRey = [3, 6, -10, 2, -6, 1, 0, -8, -2, 9, 7, -5];
+// var Valverde = [-7, -1, 6, -10, 2, 8, 1, -9, 7, 0, -6, 3];
+// var Temporada = [-6, -10, -1, -8, -3, 9, 7, 2, 5, 0, 1, -2];
