@@ -2,6 +2,9 @@ import React from "react";
 import ReactCloud from "react-wordcloud";
 
 import words from "./words";
+import Athletic from "./wordsAthletic";
+import Elon from "./wordsElon";
+import Formula from "./wordsFormula";
 
 export default function ReactWordCloud() {
 
@@ -39,7 +42,7 @@ export default function ReactWordCloud() {
           textAlign: "center"
         }}
       >
-        <ReactCloud words={words} options={options} />
+        <ReactCloud words={Elon} options={options} />
       </div>
     );
   }
