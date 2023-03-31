@@ -504,175 +504,175 @@
 
 export default [
   {
-    text: "Athletic",
-    value: 68
-  },
-  {
-    text: "clasificacion",
-    value: 51
-  },
-  {
-    text: "williams",
-    value: 60
-  },
-  {
-    text: "athletic club",
+    text: "formula1",
     value: 70
   },
   {
-    text: "balon",
-    value: 10
+    text: "Q3",
+    value: 51
   },
   {
-    text: "muniain",
-    value: 54
+    text: "russell",
+    value: 34
   },
   {
-    text: "luis enrique",
-    value: 12
+    text: "redbull",
+    value: 68
   },
   {
-    text: "europa",
-    value: 77
+    text: "safetycar",
+    value: 27
   },
   {
-    text: "eurocopa",
-    value: 22
+    text: "verstappen",
+    value: 65
   },
   {
-    text: "futbolistas",
-    value: 35
+    text: "championship",
+    value: 58
   },
   {
-    text: "titular",
+    text: "f1",
+    value: 69
+  },
+  {
+    text: "grandprix",
+    value: 56
+  },
+  {
+    text: "circuito",
     value: 44
   },
   {
-    text: "txapeldun",
-    value: 38
-  },
-  {
-    text: "valverde",
-    value: 70
-  },
-  {
-    text: "centenario",
-    value: 56
-  },
-  {
-    text: "barcelona",
-    value: 64
-  },
-  {
-    text: "selección",
+    text: "entrenamientos",
     value: 29
   },
   {
-    text: "bielsa",
+    text: "clasificación",
     value: 41
   },
   {
-    text: "san mames",
+    text: "carrera",
     value: 49
   },
   {
-    text: "bizkaia",
-    value: 40
-  },
-  {
-    text: "iñigo martinez",
-    value: 59
-  },
-  {
-    text: "título",
-    value: 49
-  },
-  {
-    text: "osasuna",
-    value: 45
-  },
-  {
-    text: "entrenamientos",
-    value: 11
-  },
-  {
-    text: "europa",
-    value: 22
-  },
-  {
-    text: "aupa",
-    value: 46
-  },
-  {
-    text: "bilbao",
-    value: 38
-  },
-  {
-    text: "liga",
-    value: 54
-  },
-  {
-    text: "gabarra",
-    value: 60
-  },
-  {
-    text: "real sociedad",
-    value: 56
-  },
-  {
-    text: "futbol",
-    value: 51
-  },
-  {
-    text: "lezama",
-    value: 56
-  },
-  {
-    text: "cantera",
-    value: 67
-  },
-  {
-    text: "presion",
+    text: "paddock",
     value: 20
   },
   {
-    text: "fichajes",
-    value: 10
-  },
-  {
-    text: "gol",
-    value: 68
-  },
-  {
-    text: "euskadi",
-    value: 35
-  },
-  {
-    text: "getafe",
+    text: "astonmartin",
     value: 59
   },
   {
-    text: "bakalao",
+    text: "perez",
+    value: 49
+  },
+  {
+    text: "alpine",
+    value: 35
+  },
+  {
+    text: "lluvia",
+    value: 21
+  },
+  {
+    text: "melbourne",
+    value: 34
+  },
+  {
+    text: "piloto",
+    value: 22
+  },
+  {
+    text: "coche",
+    value: 46
+  },
+  {
+    text: "ingenieros",
+    value: 38
+  },
+  {
+    text: "mercedes",
+    value: 60
+  },
+  {
+    text: "DRS",
+    value: 56
+  },
+  {
+    text: "FIA",
+    value: 51
+  },
+  {
+    text: "stroll",
+    value: 56
+  },
+  {
+    text: "alonso",
+    value: 69
+  },
+  {
+    text: "monaco",
+    value: 20
+  },
+  {
+    text: "pole",
+    value: 50
+  },
+  {
+    text: "DAZN",
+    value: 38
+  },
+  {
+    text: "sainz",
+    value: 35
+  },
+  {
+    text: "33",
+    value: 59
+  },
+  {
+    text: "ferrari",
     value: 47
   },
   {
-    text: "simon",
-    value: 67
+    text: "leclerc",
+    value: 36
   },
   {
-    text: "copa",
-    value: 77
+    text: "elplan",
+    value: 57
   },
   {
-    text: "tebas",
+    text: "podium",
     value: 39
   },
   {
-    text: "arbitro",
+    text: "lobato",
     value: 26
   },
   {
-    text: "125 aniversario",
-    value: 52
-  }
+    text: "twitterf1",
+    value: 36
+  },
+  {
+    text: "fastlap",
+    value: 29
+  },
+  {
+    text: "schumacher",
+    value: 49
+  },
+  {
+    text: "lamision",
+    value: 33
+  },
+  {
+    text: "melendi",
+    value: 15
+  },
+  {
+    text: "elnano",
+    value: 66
+  } 
 ];
