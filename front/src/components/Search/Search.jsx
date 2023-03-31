@@ -48,10 +48,15 @@ import search from "../../iconos-smartketing/search.svg";
 import searchBlue from "../../iconos-smartketing/search-blue.svg";
 import "./Search.css";
 import Sidenav from "../Sidenav/Sidenav";
+import ApiCall from "../apiCall/Apicall";
+import { useNavigate } from "react-router-dom";
 
 export default function Search() {
   const [visible, setVisible] = useState(false);
   const [inputValue, setInputValue] = useState("");
+  const [Search, setSearch] = useState("");
+
+  const navigate = useNavigate();
 
   const cambioColor = (event) => {
     if (event.target.value !== "") {
@@ -59,16 +64,33 @@ export default function Search() {
     } else {
       setVisible(false);
     }
+    setSearch(event.target.value)
     setInputValue(event.target.value);
   };
+
   const clearInput = () => {
     setInputValue("");
     setVisible(false);
   };
   
   const busqueda = () => {
-    encodeURIComponent(inputValue);
-    window.open(`http://localhost:3000/test`, "_blank");
+    console.log(Search);
+    let tkn =localStorage.getItem('token')
+    console.log(tkn);
+    let data = {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${tkn}`
+      },
+      body: JSON.stringify({"value":Search})
+    }
+    fetch("http://localhost:3001/users/updatesearch", data)
+      .then(res => res.json())
+      .then(data => console.log(data))
+
+    navigate('/graphics');
+
   };
 
   return (
