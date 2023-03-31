@@ -1,5 +1,5 @@
 export default {
-  name: "formula1",
+  name: "Formula1",
   children: [
     {
       name: "GPAustralia",
@@ -32,9 +32,9 @@ export default {
         {
           name: "Races",
           children: [
-            { name: "Win", size: 2423 },
+            { name: "Win", size: 5423 },
             { name: "Podium", size: 4310 },
-            { name: "Championship", size: 5256 },
+            { name: "Championship", size: 2256 },
           ],
         },
         { name: "Aston Martin", size: 3113 },
@@ -51,3 +51,9 @@ export default {
     },
   ],
 };
+
+// ARRAY PARA LOS GRAFICOS DE LINEAS
+// var GPAustralia = [8, -3, -6, 5, -8, -1, 2, 9, 0, -4, 7, -2];
+// var Ferrari = [-8, -9, -5, 1, -4, 8, -10, 6, 7, 2, 5, 0];
+// var FernandoAlonso = [0, 5, -9, -7, -10, 2, 8, -2, 6, 4, -3, 7];
+// var Aerodynamics = [9, -1, -2, -5, -8, -4, -3, 3, -9, 7, -10, 0];

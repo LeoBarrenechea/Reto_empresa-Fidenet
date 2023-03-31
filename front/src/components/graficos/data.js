@@ -1040,7 +1040,7 @@
 // }
 
 export default {
-  name: "formula1",
+  name: "Formula1",
   children: [
     {
       name: "GPAustralia",
@@ -1058,21 +1058,6 @@ export default {
       ],
     },
     {
-      name: "Fernando Alonso",
-      children: [
-        {
-          name: "Races",
-          children: [
-            { name: "Win", size: 2423 },
-            { name: "Podium", size: 4310 },
-            { name: "World Champion", size: 5256 },
-          ],
-        },
-        { name: "Aston Martin", size: 3113 },
-        { name: "Lewis Hamilton", size: 5413 },
-      ],
-    },
-    {
       name: "Ferrari",
       children: [
         { name: "Sainz", size: 5121 },
@@ -1080,6 +1065,21 @@ export default {
         { name: "Improve", size: 236 },
         { name: "DRS", size: 6314 },
         { name: "MercedesF1", size: 5631 },
+      ],
+    },
+    {
+      name: "Fernando Alonso",
+      children: [
+        {
+          name: "Races",
+          children: [
+            { name: "Win", size: 5423 },
+            { name: "Podium", size: 4310 },
+            { name: "Championship", size: 2256 },
+          ],
+        },
+        { name: "Aston Martin", size: 3113 },
+        { name: "Lewis Hamilton", size: 5413 },
       ],
     },
     {
