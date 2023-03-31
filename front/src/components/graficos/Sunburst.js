@@ -58,7 +58,7 @@ import { transition as d3Transition } from "d3-transition";
 //FIXME normalize case
 class Sunburst extends React.Component {
   static propTypes = {
-    data: PropTypes.object.isRequired,
+    data: PropTypes.array.isRequired,
     width: PropTypes.string.isRequired,
     height: PropTypes.string.isRequired,
     count_member: PropTypes.string.isRequired,
@@ -91,7 +91,7 @@ class Sunburst extends React.Component {
 
   static defaultProps = {
     tooltip: true,
-    tooltipFunc: data => data.name,
+    tooltipFunc: data => data["name"],
     radianCutoff: 0.001,
     transitionDuration: 500,
     colorFunc: (node, current_color) => current_color,

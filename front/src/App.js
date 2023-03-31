@@ -11,7 +11,7 @@ import Search from './components/Search/Search';
 
 function App() {
   let [data ,setData] = useState('');
-  let [mentions ,setMentions] = useState([]);
+  let [mentions ,setMentions] = useState(null);
   let [type ,setType] = useState('');
   let [probability ,setProbability] = useState('');
   let [isLoading, setIsLoading] = useState(false);

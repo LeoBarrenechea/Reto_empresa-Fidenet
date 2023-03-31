@@ -46,13 +46,16 @@ export default function FilterData({data, setMentions, setType, setProbability, 
 
             let mentionObj = [];
             newData.forEach(mention => {
-                if (mention !== undefined && mention.annotations)
+                if (mention !== undefined)
                 {
-                    console.log(mention.type);
-                    mentionObj.push({"name": mention.type, "children": mention});
+                    for (let i = 0; i < mention.length; i++)
+                    {
+                            console.log(mention[i]);
+                            mentionObj.push({name: mention[i].type, children: [{"name": mention[i].normalized_text, "size": mention[i].probability}]})
+                    }
                 }
             })
-            console.log(mentionObj);            
+            setMentions(mentionObj);            
             /* for (let i = 0; i < mentionObj.length; i++)
             {
                 for (let j = 0; j < mentionObj[i].length; j++)

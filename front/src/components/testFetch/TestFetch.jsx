@@ -4,10 +4,9 @@ import { MyContext } from "../myContext/MyContext";
 import Sunburst from "../graficos/Sunburst";
 import FilterData from "../filterData/FilterData";
 /* import data from "../graficos/data";
- */export default function TestFetch()
 import data1 from "../graficos/data"
 import Mapa from "../Mapa/Mapa";
-import Lineas from "../Lineas/Lineas"
+import Lineas from "../Lineas/Lineas"*/
 import Sidenav from "../Sidenav/Sidenav";
 
 
@@ -22,18 +21,36 @@ export default function TestFetch()
 
         FilterData({data, setMentions, setProbability, setType,mentions, type, probability});
 
-    /* useEffect(() => {
+    useEffect(() => {
         if(type !== '')
             console.log(type);
     }, [type])
     useEffect(() => {
-        if (mentions.length > 0)
-            console.log(mentions[0].probability);
-    }, [mentions])
+        if (mentions)
+        {
+            console.log(mentions);
+            let organizationsArray = []
+            let personsArray = []
+            mentions.forEach(mention => {
+                if(mention.name ==="Organization"){
+                    organizationsArray.push(mention.children[0])
+                } else {
+                    personsArray.push(mention.children[0])
+                }
+
+            });
+        
+            console.log(personsArray);
+            console.log(organizationsArray);
+            
+
+            console.log(convertArrayToObject(personsArray, "name"));
+        }
+    }, [mentions]);
     useEffect(() => {
         if(type !== '')
             console.log(probability)
-    }, [probability]) */
+    }, [probability])
 
 
         
@@ -41,10 +58,10 @@ export default function TestFetch()
         <>
         <Sidenav z-index="99"/>
         <h1>testDatos</h1>
-        {
-            data ?
+        {/* {
+            mentions ?
             <Sunburst 
-            data={data[0]}
+            data={mentions}
             scale="linear"
             tooltipContent={<div class="sunburstTooltip" style="position:absolute; color:'black'; z-index:10; background: #e2e2e2; padding: 5px; text-align: center;" />}
             tooltip
@@ -54,10 +71,10 @@ export default function TestFetch()
             height="900"
             count_member="probability"
             font_size={12}
-            labelFunc={node => node.data[0]}
+            labelFunc={node => node.mentions.name}
             />
             : <></>
-        }
+        } */}
     </>
     )
 }
