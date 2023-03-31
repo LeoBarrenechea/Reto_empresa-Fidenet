@@ -42,7 +42,7 @@ export default function ReactWordCloud() {
           textAlign: "center"
         }}
       >
-        <ReactCloud words={Elon} options={options} />
+        <ReactCloud words={words} options={options} />
       </div>
     );
   }
