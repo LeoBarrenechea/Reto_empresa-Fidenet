@@ -14,18 +14,19 @@ import MapaCard from "../Mapa/MapaCard"
 import Mapa from "../Mapa/Mapa";
 // import Lineas from "../Lineas/Lineas"
 import Sidenav from "../Sidenav/Sidenav";
+import { useParams } from 'react-router-dom';
 
 
 export default function TestFetch() {
 
     let { SearchInput, setSearchInput, data, setData, setMentions, mentions, setType, setProbability, probability, type } = useContext(MyContext);
     console.log(SearchInput);
-
+    const param = useParams();
     return (
         <>
             <Sidenav />
             <div className="wordPage">
-                <h1 className="searchWord">Palabra</h1>
+                <h1 className="searchWord">{param.name}</h1>
                 <div className="row">
                     <SunburstCard SearchInput={SearchInput}/>
                     <ReactWordCloudCard SearchInput={SearchInput}/>

@@ -66,7 +66,7 @@ export class UsersService {
         return null;
       }
 
-      else if (user[0].searches.length > 3 && user[0].typeAcc === 'free')
+      else if (user[0].searches.length >= 3 && user[0].typeAcc === 'free')
       {
         return user;
       }
@@ -77,7 +77,26 @@ export class UsersService {
         return await this.usersModel.find({username: req.user.username})
       }
     }
-    
+  }
+
+  async FindSearch(body: any, req: any) {
+    let user = this.usersModel.find({username: req.user.username});
+
+    if (user)
+    {
+      for (let i = 0; i < user[0].searches.length; i++)
+      {
+        if (user[0].searches[i] === body)
+        {
+          return user[0].searches[i];
+        }
+      }
+    }
+
+    else
+    {
+      return {msg: 'no funciona'};
+    }
   }
 }
 

@@ -21,6 +21,7 @@ import logoNestjs from '../images/nestjs-logo.png'
 import logoMongodb from '../images/mongodb-logo.png'
 import logoAws from '../images/AWS-logo.png'
 import { makeStyles } from '@material-ui/core';
+import Footer from '../footer/Footer';
 
 
 const useStyles = makeStyles(theme => ({
@@ -196,7 +197,7 @@ export default function Home() {
                 <h1>Suscríbete</h1>
                 <h2 className={classes.contact} id='contact'>Contacta con nosotros</h2>
             </div>
-
+            <Footer/>
         </>
     )
 }

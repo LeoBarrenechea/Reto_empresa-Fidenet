@@ -24,10 +24,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path="/login" element={<Login/>} />
-          <Route path='/test' element={<TestFetch/>}/>
+          <Route path={`/graphics/:name`} element={<TestFetch/>}/>
           <Route path='/search' element={<Search/>}/>
         </Routes>
-        <Footer />
       </BrowserRouter>
     </MyContext.Provider>
   );
