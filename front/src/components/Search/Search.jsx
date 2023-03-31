@@ -88,7 +88,7 @@ export default function Search() {
             onChange={cambioColor}
           />
           <div className={`btn ${visible ? "active" : ""}`} onClick={busqueda}>
-            <img src={visible ? searchBlue : search} alt="search" />
+            <img src={search} alt="search" />
           </div>
           <span className="clear" onClick={clearInput}></span>
         </div>
