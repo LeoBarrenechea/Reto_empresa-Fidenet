@@ -24,8 +24,10 @@ ChartJS.register(
   Filler
 );
 
-var opcion1 = [0, 10, 8, 3, 4, 7, 6, -10, 5, 2, 4, 8];
+var Entrenador = [0, 10, 8, 3, 4, 7, 6, -10, 5, 2, 4, 8];
 var opcion2 = [7, 3, 0, 4, -2, -9, -4, 3, 0, 7, -8, 1];
+var opcion3 = [-4, -3, -5, 2, -7, 6, 9, -1, 0, -7, 1, -9];
+
 var meses = [
   "Enero",
   "Febrero",
@@ -46,8 +48,8 @@ var midata = {
 
   datasets: [
     {
-      label: "opcion1",
-      data: opcion1,
+      label: "Entrenador",
+      data: Entrenador,
       tension: 0.5,
       fill: false,
       borderColor: "rgb(255, 192, 44)",
@@ -67,6 +69,17 @@ var midata = {
       pointBorderColor: "rgb(54, 208, 255)",
       pointBackgroundColor: "rgba(54, 208, 255,0.5)",
     },
+    {
+      label: "opcion3",
+      data: opcion3,
+      tension: 0.5,
+      fill: false,
+      borderColor: "rgb(72, 108, 255)",
+      backgroundColor: "rgba(72, 108, 255,0.5)",
+      pointRadius: 5,
+      pointBorderColor: "rgb(72, 108, 255)",
+      pointBackgroundColor: "rgba(72, 108, 255,0.5)",
+    },
   ],
 };
 
@@ -74,6 +87,7 @@ var misoptions = {
   scales: {
     y: {
       min: -10,
+      max: 10,
       ticks:{
         callback: function(value, index){
             if(value===10){

@@ -1,0 +1,21 @@
+.wordPage {
+    margin-left: 10px;
+    margin-bottom: 150px;
+}
+
+.searchWord {
+    padding-top: 40px;
+    margin-left: 130px;
+}
+
+.row{
+    margin: 0;
+    display: flex;
+    margin-top: 80px;
+    height: 650px;
+}
+
+.column {
+    margin-left: 130px;
+    
+}

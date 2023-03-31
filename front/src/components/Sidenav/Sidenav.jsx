@@ -7,6 +7,8 @@ import logo from "../../iconos-smartketing/favicon.png";
 import Swal from "sweetalert2";
 
 export default function Sidenav() {
+  const token = localStorage.getItem('token');
+  localStorage.setItem(token, 'juan123');
   const handleQuestionClick = () => {
     Swal.fire({
       icon: "question",
@@ -16,11 +18,11 @@ export default function Sidenav() {
   };
 
   return (
-    <div className="position-fixed sidenav">
+    <div className={`position-fixed sidenav `}>
       <ul className="nav flex-column ">
         <li className="nav-item">
           <a href="/" title="FIDENET">
-            <img className="nav-link" src={logo} alt="logo" />
+            <img className="nav-logo" src={logo} alt="logo" />
           </a>
         </li>
         <li className="nav-item">
@@ -29,17 +31,17 @@ export default function Sidenav() {
           </a>
         </li>
         <li className="nav-item">
-          <a href="/documentos" title="Documentos">
+          <a href="/test" title="Documentos">
             <img className="nav-link" src={document} alt="documents" />
           </a>
         </li>
-        <li className="nav-item" style={{ marginTop: "250px" }}>
+        <li className="nav-item" >
           <a onClick={handleQuestionClick} title="Como funciona">
             <img className="nav-link" src={question} alt="question" />
           </a>
         </li>
         <li className="nav-item">
-          <a href="/" title="Log out">
+          <a href="/" title="Log out" onClick={()=>localStorage.removeItem(token)}>
             <img className="nav-link" src={logout} alt="logout" />
           </a>
         </li>
