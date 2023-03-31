@@ -3,7 +3,6 @@ import { useContext, useEffect } from "react";
 import ApiCall from "../apiCall/Apicall";
 import { MyContext } from "../myContext/MyContext";
 import Sunburst from "../graficos/Sunburst";
-import FilterData from "../filterData/FilterData";
 /* import data from "../graficos/data";
  */
 import data1 from "../graficos/data"
@@ -19,6 +18,7 @@ import Sidenav from "../Sidenav/Sidenav";
 
 export default function TestFetch() {
 
+<<<<<<< HEAD
     let { data, setData, setMentions, mentions, setType, setProbability, probability, type } = useContext(MyContext);
 
     // useEffect(() => {
@@ -47,6 +47,10 @@ export default function TestFetch() {
     //     if (type !== '')
     //         console.log(probability)
     // }, [probability])
+=======
+    let { SearchInput, setSearchInput, data, setData, setMentions, mentions, setType, setProbability, probability, type } = useContext(MyContext);
+    console.log(SearchInput);
+>>>>>>> 464670d53f936b57fa9a2ab098596a1dcdf8dbeb
 
     return (
         <>
@@ -54,8 +58,8 @@ export default function TestFetch() {
             <div className="wordPage">
                 <h1 className="searchWord">Palabra</h1>
                 <div className="row">
-                    <SunburstCard />
-                    <ReactWordCloudCard />
+                    <SunburstCard SearchInput={SearchInput}/>
+                    <ReactWordCloudCard SearchInput={SearchInput}/>
                 </div>
                 <div className="column">
                     <LineasCard />

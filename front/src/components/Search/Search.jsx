@@ -43,20 +43,21 @@
 //   );
 // }
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import search from "../../iconos-smartketing/search.svg";
 import searchBlue from "../../iconos-smartketing/search-blue.svg";
 import "./Search.css";
 import Sidenav from "../Sidenav/Sidenav";
 import ApiCall from "../apiCall/Apicall";
 import { useNavigate } from "react-router-dom";
+import { MyContext } from "../myContext/MyContext";
 
 export default function Search() {
   const [visible, setVisible] = useState(false);
   const [inputValue, setInputValue] = useState("");
-  const [Search, setSearch] = useState("");
-
   const navigate = useNavigate();
+
+  let {SearchInput, setSearchInput} = useContext(MyContext);
 
   const cambioColor = (event) => {
     if (event.target.value !== "") {
@@ -64,7 +65,7 @@ export default function Search() {
     } else {
       setVisible(false);
     }
-    setSearch(event.target.value)
+    setSearchInput(event.target.value)
     setInputValue(event.target.value);
   };
 
@@ -74,7 +75,7 @@ export default function Search() {
   };
   
   const busqueda = () => {
-    console.log(Search);
+    console.log(SearchInput);
     let tkn =localStorage.getItem('token')
     console.log(tkn);
     let data = {
@@ -83,13 +84,13 @@ export default function Search() {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${tkn}`
       },
-      body: JSON.stringify({"value":Search})
+      body: JSON.stringify({"value":SearchInput})
     }
     fetch("http://localhost:3001/users/updatesearch", data)
       .then(res => res.json())
       .then(data => console.log(data))
 
-    navigate('/graphics');
+    navigate('/test');
 
   };
 
