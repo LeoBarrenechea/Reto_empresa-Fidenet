@@ -53,7 +53,7 @@
   cursor: pointer;
 }
 .btn.active{
-  background: linear-gradient(to right, #486CFF, #082188);
+  background: linear-gradient(to right, #ffc12f, #ff982f);
 
 }
 

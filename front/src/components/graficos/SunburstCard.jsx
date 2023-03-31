@@ -3,9 +3,9 @@ import Sunburst from "../graficos/Sunburst";
 import {Paper, Card} from '@material-ui/core';
 import { useContext, useEffect } from 'react';
 import { MyContext } from '../myContext/MyContext';
-import athletic from '../../array/athletic';
-import elonMusk from '../../array/elonMusk';
-import formula1 from '../../array/formula1';
+import athletic from './athletic';
+import elonMusk from './elonMusk';
+import formula1 from './formula1';
 
 function SunburstCard({SearchInput}) {
 
