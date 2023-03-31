@@ -11,6 +11,7 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { MyContext } from '../myContext/MyContext';
 import SetError from './SetError';
 import LoadingButton from '@mui/lab/LoadingButton'
+import Footer from '../footer/Footer';
 
 
 const theme = createTheme({
@@ -181,6 +182,7 @@ export default function Login()
                     </div>
                 </div>
             </Paper>
+            <Footer />
         </>
     )
 }
