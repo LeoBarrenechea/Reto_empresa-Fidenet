@@ -1,5 +1,5 @@
 export default {
-  name: "Elon Musk",
+  name: "ElonMusk",
   children: [
     {
       name: "Twitter",
@@ -37,3 +37,8 @@ export default {
     },
   ],
 };
+
+// ARRAY PARA LOS GRAFICOS DE LINEAS
+// var Twitter = [5, -10, 4, 9, 1, -4, -5, -3, -9, -7, 3, 0];
+// var SpaceX = [-8, -6, -9, 0, 2, 6, 5, 7, 4, -4, 8, 10];
+// var Tesla = [2, -4, -1, -8, 0, -3, 7, 10, -5, -9, 9, 1];

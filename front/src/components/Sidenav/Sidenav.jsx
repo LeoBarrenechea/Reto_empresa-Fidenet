@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 
 export default function Sidenav() {
   const token = localStorage.getItem('token');
-  localStorage.setItem(token, 'juan123');
+  localStorage.setItem(token, 'juan');
   const handleQuestionClick = () => {
     Swal.fire({
       icon: "question",
@@ -41,7 +41,7 @@ export default function Sidenav() {
           </a>
         </li>
         <li className="nav-item">
-          <a href="/" title="Log out" onClick={()=>localStorage.removeItem(token)}>
+          <a href="/" title="Log out" onClick={()=>localStorage.removeItem("token")}>
             <img className="nav-link" src={logout} alt="logout" />
           </a>
         </li>
