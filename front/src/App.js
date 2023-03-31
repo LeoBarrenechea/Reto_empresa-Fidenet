@@ -15,15 +15,17 @@ function App() {
   let [type ,setType] = useState('');
   let [probability ,setProbability] = useState('');
   let [isLoading, setIsLoading] = useState(false);
+  let [SearchInput, setSearchInput] = useState('');
+
 
   return (
-    <MyContext.Provider value={{data, setData, isLoading, setIsLoading, mentions, setMentions, probability, setProbability, type, setType}}>
+    <MyContext.Provider value={{data, SearchInput, setSearchInput, setData, isLoading, setIsLoading, mentions, setMentions, probability, setProbability, type, setType}}>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path="/login" element={<Login/>} />
-            <Route path='/test' element={<TestFetch/>}/>
-            <Route path='/search' element={<Search/>}/>
+          <Route path='/test' element={<TestFetch/>}/>
+          <Route path='/search' element={<Search/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>
