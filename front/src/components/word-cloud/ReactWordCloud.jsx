@@ -2,11 +2,8 @@ import React from "react";
 import ReactCloud from "react-wordcloud";
 
 import words from "./words";
-import Athletic from "./wordsAthletic";
-import Elon from "./wordsElon";
-import Formula from "./wordsFormula";
 
-export default function ReactWordCloud() {
+export default function ReactWordCloud({SearchInput}) {
 
     const options = {
       colors: [
@@ -33,7 +30,7 @@ export default function ReactWordCloud() {
     return (
       <div
         style={{
-          height: "70vh",
+          height: "65vh",
           width: "25vw",
           backgroundColor: "white",
           display: "flex",
