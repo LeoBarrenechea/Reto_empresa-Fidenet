@@ -82,14 +82,21 @@ export class UsersController {
       
     if (!user)
     {
-      return {msg: 'usuario no encontrado, no guardado'};
+      return {msg: 'no guardado'};
     }
-    else if (user[0].searches.length > 3)
+    else if (user[0].searches.length >= 3)
     {
-      return {msg: 'no guardado por exceso de busquedas'};
+      return {msg: 'exceso de busquedas'};
     }
     else{
-      return {msg: 'exitosamente guardado'};
+      return {msg: 'guardado'};
     }
+  }
+
+  @UseGuards(AuthGuard('jwt'))
+  @Get('findsearch')
+  async findSearch(@Body() body: any, @Req() req: any){
+
+    return await this.usersService.FindSearch(body.search, req);
   }
 }

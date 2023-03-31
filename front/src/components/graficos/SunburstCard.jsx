@@ -3,24 +3,40 @@ import Sunburst from "../graficos/Sunburst";
 import {Paper, Card} from '@material-ui/core';
 import { useContext, useEffect } from 'react';
 import { MyContext } from '../myContext/MyContext';
-import athletic from '../../array/athletic';
-import elonMusk from '../../array/elonMusk';
-import formula1 from '../../array/formula1';
+import athletic from './athletic';
+import elonMusk from './elonMusk';
+import formula1 from './formula1';
+import { useParams } from 'react-router-dom';
 
 function SunburstCard({SearchInput}) {
-
+  const param = useParams();
   let data = null;
 
+  useEffect(() => {
+
+    let data = {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `bearer ${localStorage.getItem('token')}`
+      },
+      body: JSON.stringify({search: param.name})
+    }
+
+    fetch('http://localhost:3001/users/findsearch', data)
+      .then(res => res.json())
+      .then(data => console.log(data))
+  }, [])
+
     console.log(SearchInput);
-    if (SearchInput === "athletic")
+    if (param.name === "athletic")
     {
       data = athletic;
     }
-    else if (SearchInput === "Elon Musk")
+    else if (param.name === "Elon Musk")
     {
       data = elonMusk;
     }
-    else if (SearchInput === "formula 1")
+    else if (param.name === "formula 1")
     {
       data = formula1;
     }
