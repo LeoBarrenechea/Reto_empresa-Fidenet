@@ -89,7 +89,7 @@ var misoptions = {
       min: -10,
       max: 10,
       ticks:{
-        callback: function(value){
+        callback: function(value, index){
             if(value===10){
                 return "Positivo"
             } else if (value===0){
