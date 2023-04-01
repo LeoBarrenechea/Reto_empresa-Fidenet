@@ -5,10 +5,20 @@ import question from "../../iconos-smartketing/question-circle.svg";
 import document from "../../iconos-smartketing/file-earmark-text.svg";
 import logo from "../../iconos-smartketing/favicon.png";
 import Swal from "sweetalert2";
+import { useContext, useRef } from "react";
+import { MyContext } from "../myContext/MyContext";
 
 export default function Sidenav() {
   const token = localStorage.getItem('token');
   localStorage.setItem(token, 'juan');
+
+  const imgRef = useRef();
+
+  let {SearchInput} = useContext(MyContext);
+
+
+  console.log(SearchInput);
+
   const handleQuestionClick = () => {
     Swal.fire({
       icon: "question",
@@ -31,9 +41,12 @@ export default function Sidenav() {
           </a>
         </li>
         <li className="nav-item">
-          <a href="/test" title="Documentos">
-            <img className="nav-link" src={document} alt="documents" />
-          </a>
+          {SearchInput === '' ? <></>
+            :
+            <a href={`/graphics/${SearchInput}`} title={SearchInput}>
+              <img className="nav-link"  src={document} alt={SearchInput} />
+            </a>
+          }
         </li>
         <li className="nav-item" >
           <a onClick={handleQuestionClick} title="Como funciona">

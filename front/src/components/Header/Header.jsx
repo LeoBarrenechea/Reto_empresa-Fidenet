@@ -16,7 +16,6 @@ export default function Header() {
               className="navbar-brand"
               src={logoHuella}
               alt="FIDENET"
-              onClick={() => navigate("/")}
             />
           </a>
           <button

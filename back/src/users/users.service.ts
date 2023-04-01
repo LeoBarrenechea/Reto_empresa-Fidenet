@@ -79,14 +79,14 @@ export class UsersService {
     }
   }
 
-  async FindSearch(body: any, req: any) {
+  async FindSearch(search: any, req: any) {
     let user = this.usersModel.find({username: req.user.username});
 
     if (user)
     {
       for (let i = 0; i < user[0].searches.length; i++)
       {
-        if (user[0].searches[i] === body)
+        if (user[0].searches[i] === search)
         {
           return user[0].searches[i];
         }
