@@ -11,7 +11,7 @@ export default function Header() {
         className={`navbar navbar-expand-lg`}
       >
         <div className="container-fluid">
-          <a href="/">
+          <a href="#fotoCabecera">
             <img
               className="navbar-brand"
               src={logoHuella}

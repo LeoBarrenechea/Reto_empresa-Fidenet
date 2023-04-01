@@ -41,7 +41,7 @@ export default function Home() {
         <>
             <Header/>
             <div className="homePage">
-                <div className="fotoCabecera">
+                <div id= "fotoCabecera"className="fotoCabecera">
                     <div className="displayContainer" >
                         <h4 className="eslogan" data-aos='fade-right'>Analisis de datos de redes sociales en la palma de tu mano</h4>
                         <h2 className="somosSmartketing" data-aos='fade-right'>Somos Smartketing</h2>
