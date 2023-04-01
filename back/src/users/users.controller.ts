@@ -84,7 +84,7 @@ export class UsersController {
     {
       return {msg: 'no guardado'};
     }
-    else if (user[0].searches.length >= 3)
+    else if (user >= 3)
     {
       return {msg: 'exceso de busquedas'};
     }
