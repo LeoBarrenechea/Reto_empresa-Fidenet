@@ -66,15 +66,15 @@ export class UsersService {
         return null;
       }
 
-      else if (user[0].searches.length >= 3 && user[0].typeAcc === 'free')
+      else if (user[0].searches.length +1 > 3 && user[0].typeAcc === 'free')
       {
-        return user;
+        return 3;
       }
 
       else
       {
         await this.usersModel.updateOne({username: req.user.username}, {$push: {searches: data.value}})
-        return await this.usersModel.find({username: req.user.username})
+        return "ok";
       }
     }
   }
