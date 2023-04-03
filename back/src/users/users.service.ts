@@ -66,10 +66,10 @@ export class UsersService {
         return null;
       }
 
-      /* else if (user[0].searches.length +1 > 3 && user[0].typeAcc === 'free')
+      else if (user[0].searches.length +1 > 3 && user[0].typeAcc === 'free')
       {
         return 3;
-      } */
+      }
 
       else
       {

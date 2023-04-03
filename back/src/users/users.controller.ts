@@ -84,10 +84,11 @@ export class UsersController {
     {
       return {msg: 'no guardado'};
     }
-   /*  else if (user >= 3)
+    else if (user >= 3)
     {
       return {msg: 'exceso de busquedas'};
-    } */
+    }
+    
     else{
       return {msg: 'guardado'};
     }
