@@ -12,21 +12,6 @@ function SunburstCard({SearchInput, mentions}) {
   const param = useParams();
   let data = null;
   
-  useEffect(() => {
-    
-    let data = {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `bearer ${localStorage.getItem('token')}`
-      },
-      body: JSON.stringify({search: param.name})
-    }
-    
-    fetch('http://localhost:3001/users/findsearch', data)
-    .then(res => res.json())
-    .then(data => console.log(data))
-  }, [])
-  
   /* useEffect(() => {
     if (mentions)
       console.log(mentions.personObj.name)
@@ -53,11 +38,10 @@ function SunburstCard({SearchInput, mentions}) {
       <Card style={{ borderRadius: 20 }} elevation={3}>
         <h2 className="sunburstTitle">Hashtags relacionados</h2>
         <div className="sunburstDisplay">
-
         {
           mentions &&
           <Sunburst
-          data={data}
+          data={ mentions.Organization}
           scale="linear"
           tooltipContent={<div class="sunburstTooltip" style="position:absolute; color:'black'; z-index:10; background: #e2e2e2; padding: 5px; text-align: center;" />}
           tooltip

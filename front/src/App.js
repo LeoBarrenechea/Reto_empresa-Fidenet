@@ -11,6 +11,7 @@ import Search from './components/Search/Search';
 
 function App() {
   let [apiData ,setApiData] = useState(null);
+  let [data, setData] = useState('');
   let [mentions ,setMentions] = useState(null);
   let [cloud, setCloud] = useState(null);
   let [type ,setType] = useState('');
@@ -20,7 +21,7 @@ function App() {
 
 
   return (
-    <MyContext.Provider value={{apiData, SearchInput, cloud, setCloud, setSearchInput, setApiData, isLoading, setIsLoading, mentions, setMentions, probability, setProbability, type, setType}}>
+    <MyContext.Provider value={{data, setData, apiData, SearchInput, cloud, setCloud, setSearchInput, setApiData, isLoading, setIsLoading, mentions, setMentions, probability, setProbability, type, setType}}>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}/>
