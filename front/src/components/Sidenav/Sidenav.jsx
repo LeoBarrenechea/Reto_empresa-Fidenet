@@ -44,7 +44,7 @@ export default function Sidenav() {
           {SearchInput === '' ? <></>
             :
             <a href={`/graphics/${SearchInput}`} title={SearchInput}>
-              <img className="nav-link"  src={document} alt={SearchInput} />
+              <img className="nav-link" ref={imgRef}  src={document} alt={SearchInput} />
             </a>
           }
         </li>

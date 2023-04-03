@@ -91,7 +91,7 @@ class Sunburst extends React.Component {
 
   static defaultProps = {
     tooltip: true,
-    tooltipFunc: data => data["name"],
+    tooltipFunc: data => data.name,
     radianCutoff: 0.001,
     transitionDuration: 500,
     colorFunc: (node, current_color) => current_color,
