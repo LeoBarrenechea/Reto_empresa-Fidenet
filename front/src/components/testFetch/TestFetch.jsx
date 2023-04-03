@@ -15,21 +15,29 @@ import Mapa from "../Mapa/Mapa";
 // import Lineas from "../Lineas/Lineas"
 import Sidenav from "../Sidenav/Sidenav";
 import { useParams } from 'react-router-dom';
+import FilterData from '../filterData/FilterData';
 
 
 export default function TestFetch() {
 
-    let { SearchInput, setSearchInput, data, setData, setMentions, mentions, setType, setProbability, probability, type } = useContext(MyContext);
-    console.log(SearchInput);
+    let { SearchInput, cloud, setCloud, setSearchInput, apiData, setApiData, setMentions, mentions, setType, setProbability, probability, type } = useContext(MyContext);
     const param = useParams();
+
+    useEffect(() => {
+        console.log('entra en useEffect');
+        ApiCall({apiData, setApiData},'https://smartketing.onrender.com/tw_extraction/formula1')
+    },[])
+    
+    FilterData({apiData, setMentions, cloud, setCloud});
+
     return (
         <>
             <Sidenav />
             <div className="wordPage">
                 <h1 className="searchWord">{param.name}</h1>
                 <div className="row">
-                    <SunburstCard SearchInput={SearchInput}/>
-                    <ReactWordCloudCard SearchInput={SearchInput}/>
+                    <SunburstCard SearchInput={SearchInput} mentions={mentions}/>
+                    <ReactWordCloudCard cloud={cloud}/>
                 </div>
                 <div className="column">
                     <LineasCard />
