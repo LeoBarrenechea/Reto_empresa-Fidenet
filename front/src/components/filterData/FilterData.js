@@ -10,7 +10,7 @@ export default function FilterData({apiData, setMentions, cloud, setCloud})
     let Organization = {};
     let Person = {};
     let Place = {};
-    let fullObj = {};
+    let fullObj = [];
 
     useEffect(() => {
 

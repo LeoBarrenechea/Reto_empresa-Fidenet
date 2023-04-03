@@ -20,15 +20,24 @@ import FilterData from '../filterData/FilterData';
 
 export default function TestFetch() {
 
-    let { SearchInput, cloud, setCloud, setSearchInput, apiData, setApiData, setMentions, mentions, setType, setProbability, probability, type } = useContext(MyContext);
+    let { data, setData, SearchInput, cloud, setCloud, setSearchInput, apiData, setApiData, setMentions, mentions, setType, setProbability, probability, type } = useContext(MyContext);
     const param = useParams();
 
     useEffect(() => {
+        if (SearchInput !== '')
         console.log('entra en useEffect');
-        ApiCall({apiData, setApiData},'https://smartketing.onrender.com/tw_extraction/formula1')
-    },[])
+        if (SearchInput === 'Elon Musk')
+            SearchInput = SearchInput.replace(" ", "_").toLowerCase();
+        if (SearchInput === 'formula 1')
+            SearchInput = SearchInput.replace(" ", "");
+       fetch('https://smartketing.onrender.com/tw_extraction/'+ SearchInput)
+            .then(res => res.json())
+            .then(data => setApiData(data))
+    },[SearchInput])
+
+        FilterData({apiData, setMentions, cloud, setCloud});
+ 
     
-    FilterData({apiData, setMentions, cloud, setCloud});
 
     return (
         <>
