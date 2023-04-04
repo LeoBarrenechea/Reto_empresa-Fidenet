@@ -8,7 +8,7 @@ export default [
       value: 51
     },
     {
-      text: "rescate",
+      text: "rescue",
       value: 34
     },
     {
@@ -16,15 +16,15 @@ export default [
       value: 68
     },
     {
-      text: "juicio",
-      value: 27
+      text: "freedom",
+      value: 57
     },
     {
       text: "twitter",
       value: 70
     },
     {
-      text: "inversor",
+      text: "investor",
       value: 58
     },
     {
@@ -36,7 +36,7 @@ export default [
       value: 56
     },
     {
-      text: "empresa",
+      text: "business",
       value: 44
     },
     {
@@ -44,11 +44,11 @@ export default [
       value: 29
     },
     {
-      text: "difamación",
+      text: "defamation",
       value: 41
     },
     {
-      text: "polémica",
+      text: "controversy",
       value: 49
     },
     {
@@ -60,7 +60,7 @@ export default [
       value: 59
     },
     {
-      text: "financiación",
+      text: "financing",
       value: 49
     },
     {
@@ -72,15 +72,15 @@ export default [
       value: 11
     },
     {
-      text: "bolsa",
+      text: "stock-market",
       value: 54
     },
     {
-      text: "politica",
+      text: "politics",
       value: 22
     },
     {
-      text: "dolares",
+      text: "dollars",
       value: 46
     },
     {
@@ -92,7 +92,7 @@ export default [
       value: 60
     },
     {
-      text: "compra",
+      text: "purchase",
       value: 56
     },
     {
@@ -104,7 +104,7 @@ export default [
       value: 56
     },
     {
-      text: "millones",
+      text: "millions",
       value: 67
     },
     {
@@ -116,7 +116,7 @@ export default [
       value: 20
     },
     {
-      text: "economista",
+      text: "economist",
       value: 38
     },
     {
@@ -136,7 +136,7 @@ export default [
       value: 36
     },
     {
-      text: "patrimonio",
+      text: "patrimony",
       value: 57
     },
     {

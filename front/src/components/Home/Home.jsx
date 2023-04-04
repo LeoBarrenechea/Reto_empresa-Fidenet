@@ -40,7 +40,7 @@ export default function Home() {
             <div className="homePage">
                 <div id= "fotoCabecera"className="fotoCabecera">
                     <div className="displayContainer" >
-                        <h4 className="eslogan" data-aos='fade-right'>Analisis de datos de redes sociales en la palma de tu mano</h4>
+                        <h4 className="eslogan" data-aos='fade-right'>Análisis de datos de redes sociales en la palma de tu mano</h4>
                         <h2 className="somosSmartketing" data-aos='fade-right'>Somos Smartketing</h2>
                         <div className="displayTextBox" data-aos='fade-right'>
                             <h2 className="displayText1">Somos </h2>
@@ -90,7 +90,7 @@ export default function Home() {
                             <div className="smartketingText">
                                 <h2>Smartketing App</h2>
                                 <p>
-                                    Smartketing es una herramienta que muestra mediante el análisis de datos la repercusión de una palabra en las
+                                    Smartketing es una herramienta que muestra mediante el análisis de datos, la repercusión de una palabra en las
                                     redes sociales desglosados por sentimientos, país, red social, etc.
                                 </p>
                                 <h2>Búsqueda de palabras</h2>
@@ -99,7 +99,7 @@ export default function Home() {
                                 </p>
                                 <h2>Un gran aliado</h2>
                                 <p>
-                                    La herramienta perfecta para empresas que necesitan saber que es lo que opina la gente para poder ofrecer un servisio acorde a los intereses de la sociedad.
+                                    La herramienta perfecta para empresas que necesitan saber que es lo que opina la gente sobre un determinado tema y así poder ofrecer un servicio acorde a los intereses de la sociedad.
                                 </p>
                             </div>
                             <div className="movilFoto">
@@ -182,7 +182,7 @@ export default function Home() {
                         </p>
 
                         <p>
-                            Trás esto, nos encargamos de filtrar los datos en función de las necesidades y proporcionamos las estadisticas necesarias mediante gráficos interactivos.
+                            Tras esto, nos encargamos de filtrar los datos en función de las necesidades y proporcionamos las estadísticas necesarias mediante gráficos interactivos.
                         </p>
                     </div>
                 </div>
