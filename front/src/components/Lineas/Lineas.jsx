@@ -91,40 +91,6 @@ var FernandoAlonso = [4, 6, 8, 5, -3, 2, 8, -2, 6, 4, -3, 7];
     label3 = "FernandoAlonso";
   }
 
-var CopaDelRey = [3, 6, -10, 2, -6, 1, 0, -8, -2, 9, 7, -5];
-var Valverde = [-7, -1, 6, -10, 2, 8, 1, -9, 7, 0, -6, 3];
-var Temporada = [-6, -10, -1, -8, -3, 9, 7, 2, 5, 0, 1, -2];
-
-var Twitter = [5, -10, 4, 9, 1, -4, -5, -3, -9, -7, 3, 0];
-var SpaceX = [-8, -6, -9, 0, 2, 6, 5, 7, 4, -4, 8, 10];
-var Tesla = [2, -4, -1, -8, 0, -3, 7, 10, -5, -9, 9, 1];
-
-var GPAustralia = [8, -3, -6, 5, -8, -1, 2, 9, 0, -4, 7, -2];
-var Ferrari = [-8, -9, -5, 1, -4, 8, -10, 6, 7, 2, 5, 0];
-var FernandoAlonso = [0, 5, -9, -7, -10, 2, 8, -2, 6, 4, -3, 7];
-
-
-// const label1 ="CopaDelRey"
-// const data1 = CopaDelRey
-// const label2 ="Valverde"
-// const data2 = Valverde
-// const label3 ="Temporada"
-// const data3 = Temporada
-
-const label1 ="Twitter"
-const data1 = Twitter
-const label2 ="SpaceX"
-const data2 = SpaceX
-const label3 ="Tesla"
-const data3 = Tesla
-
-// const label1 ="GPAustralia"
-// const data1 = GPAustralia
-// const label2 ="Ferrari"
-// const data2 = Ferrari
-// const label3 ="FernandoAlonso"
-// const data3 = FernandoAlonso
-
 var meses = [
   "Enero",
   "Febrero",
