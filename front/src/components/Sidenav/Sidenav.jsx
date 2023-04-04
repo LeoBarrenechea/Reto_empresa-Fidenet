@@ -7,13 +7,33 @@ import logo from "../../iconos-smartketing/favicon.png";
 import Swal from "sweetalert2";
 
 export default function Sidenav() {
-  const token = localStorage.getItem('token');
-  localStorage.setItem(token, 'juan');
+  // const token = localStorage.getItem('token');
   const handleQuestionClick = () => {
     Swal.fire({
       icon: "question",
       title: "¿Cómo funciona?",
       text: "Haz click en la lupa central y busca información sobre el tema que desees",
+    });
+  };
+  const clickLogout = (event) => {
+    event.preventDefault(); // evita el comportamiento predeterminado de hacer clic en el enlace
+    Swal.fire({
+      icon: "question",
+      title: "¿Estás seguro de que quieres cerrar sesión?",
+      confirmButtonText: "Sí, cerrar sesión",
+      cancelButtonText: "Cancelar",
+      showCancelButton: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        localStorage.removeItem("token");
+        Swal.fire({
+          icon: "success",
+          title: "Log Out realizado con éxito",
+          text: "Has cerrado sesión correctamente. Vuelve pronto",
+        }).then(() => {
+          window.location.href = "/";
+        });
+      }
     });
   };
 
@@ -41,7 +61,7 @@ export default function Sidenav() {
           </a>
         </li>
         <li className="nav-item">
-          <a href="/" title="Log out" onClick={()=>localStorage.removeItem("token")}>
+          <a href="/" title="Log out" onClick={clickLogout}>
             <img className="nav-link" src={logout} alt="logout" />
           </a>
         </li>

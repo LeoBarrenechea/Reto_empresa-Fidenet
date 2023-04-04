@@ -12,6 +12,8 @@ import {
   Title,
   Tooltip,
 } from "chart.js";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 ChartJS.register(
   CategoryScale,
@@ -24,9 +26,70 @@ ChartJS.register(
   Filler
 );
 
-var Entrenador = [0, 10, 8, 3, 4, 7, 6, -10, 5, 2, 4, 8];
-var opcion2 = [7, 3, 0, 4, -2, -9, -4, 3, 0, 7, -8, 1];
-var opcion3 = [-4, -3, -5, 2, -7, 6, 9, -1, 0, -7, 1, -9];
+export default function Lineas() {
+
+const param = useParams();
+let data1 = null;
+let data2 = null;
+let data3 = null;
+let label1 = data1;
+let label2 = data2;
+let label3 = data3;
+
+useEffect(() => {
+
+  let data = {
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `bearer ${localStorage.getItem('token')}`
+    },
+    body: JSON.stringify({search: param.name})
+  }
+
+  fetch('http://localhost:3001/users/findsearch', data)
+    .then(res => res.json())
+    .then(data => console.log(data))
+}, [])
+
+var CopaDelRey = [3, 6, -10, 2, -6, 1, 0, -8, -2, 9, 7, -5];
+var Valverde = [-7, -1, 6, -10, 2, 8, 1, -9, 7, 0, -6, 3];
+var Temporada = [-6, -10, -1, -8, -3, 9, 7, 2, 5, 0, 1, -2];
+
+var Twitter = [5, 4, 6, 8, 6, 5, -2, 0, 2, -6, -4, 2];
+var SpaceX = [-8, -6, -9, 0, 2, 6, 5, 7, 3, -2, 8, 10];
+var Tesla = [3, -2, 1, -4, 0, 3, 7, 10, 5, -4, 0, 6];
+
+var GPAustralia = [8, -3, -6, 5, -8, -1, 2, 9, 0, -4, 7, -2];
+var Ferrari = [-8, -9, -5, 1, -4, 8, -10, 6, 7, 2, 5, 0];
+var FernandoAlonso = [4, 6, 8, 5, -3, 2, 8, -2, 6, 4, -3, 7];
+
+  if (param.name === "athletic")
+  {
+    data1 = CopaDelRey;
+    data2 = Valverde;
+    data3 = Temporada;
+    label1 = "CopaDelRey";
+    label2 = "Valverde";
+    label3 = "Temporada";
+  }
+  else if (param.name === "Elon Musk")
+  {
+    data1 = Twitter;
+    data2 = SpaceX;
+    data3 = Tesla;
+    label1 = "Twitter";
+    label2 = "SpaceX";
+    label3 = "Tesla";
+  }
+  else if (param.name === "formula 1")
+  {
+    data1 = GPAustralia;
+    data2 = Ferrari;
+    data3 = FernandoAlonso;
+    label1 = "GPAustralia";
+    label2 = "Ferrari";
+    label3 = "FernandoAlonso";
+  }
 
 var meses = [
   "Enero",
@@ -48,35 +111,35 @@ var midata = {
 
   datasets: [
     {
-      label: "Entrenador",
-      data: Entrenador,
+      label: label1,
+      data: data1,
       tension: 0.5,
       fill: false,
       borderColor: "rgb(255, 192, 44)",
       backgroundColor: "rgba(255, 192, 44,0.5)",
-      pointRadius: 5,
+      pointRadius: 3,
       pointBorderColor: "rgb(255, 192, 44)",
       pointBackgroundColor: "rgba(255, 192, 44,0.5)",
     },
     {
-      label: "opcion2",
-      data: opcion2,
+      label: label2,
+      data: data2,
       tension: 0.5,
       fill: false,
       borderColor: "rgb(54, 208, 255)",
       backgroundColor: "rgba(54, 208, 255,0.5)",
-      pointRadius: 5,
+      pointRadius: 3,
       pointBorderColor: "rgb(54, 208, 255)",
       pointBackgroundColor: "rgba(54, 208, 255,0.5)",
     },
     {
-      label: "opcion3",
-      data: opcion3,
+      label: label3,
+      data: data3,
       tension: 0.5,
       fill: false,
       borderColor: "rgb(72, 108, 255)",
       backgroundColor: "rgba(72, 108, 255,0.5)",
-      pointRadius: 5,
+      pointRadius: 3,
       pointBorderColor: "rgb(72, 108, 255)",
       pointBackgroundColor: "rgba(72, 108, 255,0.5)",
     },
@@ -109,7 +172,6 @@ var misoptions = {
   },
 };
 
-export default function Lineas() {
   return (
     <div >
       <Line data={midata} options={misoptions} className="container"/>

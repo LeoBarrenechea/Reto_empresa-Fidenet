@@ -5,7 +5,7 @@
 
 .navbar-brand {
   transform: scale(0.5);
-  margin-left: -70px;
+  margin-left: -50px;
 }
 
 .nav-link {
@@ -28,6 +28,5 @@
   }
   .navbar-toggler:hover {
     background-color: #e3a105;
-  }
- 
+  } 
 }
