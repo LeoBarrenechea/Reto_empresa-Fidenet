@@ -8,6 +8,10 @@ export default [
       value: 51
     },
     {
+      text: "qualifying",
+      value: 37
+    },
+    {
       text: "russell",
       value: 34
     },
@@ -36,19 +40,19 @@ export default [
       value: 56
     },
     {
-      text: "circuito",
+      text: "circuit",
       value: 44
     },
     {
-      text: "entrenamientos",
+      text: "practice sessions",
       value: 29
     },
     {
-      text: "clasificación",
+      text: "clasification",
       value: 41
     },
     {
-      text: "carrera",
+      text: "race",
       value: 49
     },
     {
@@ -68,7 +72,7 @@ export default [
       value: 35
     },
     {
-      text: "lluvia",
+      text: "rain",
       value: 21
     },
     {
@@ -76,15 +80,15 @@ export default [
       value: 34
     },
     {
-      text: "piloto",
+      text: "pilot",
       value: 22
     },
     {
-      text: "coche",
+      text: "car",
       value: 46
     },
     {
-      text: "ingenieros",
+      text: "engineers",
       value: 38
     },
     {
@@ -108,7 +112,7 @@ export default [
       value: 69
     },
     {
-      text: "monaco",
+      text: "bakú",
       value: 20
     },
     {
@@ -157,7 +161,7 @@ export default [
     },
     {
       text: "schumacher",
-      value: 49
+      value: 39
     },
     {
       text: "lamision",
