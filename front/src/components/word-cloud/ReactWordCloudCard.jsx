@@ -1,6 +1,6 @@
 import './ReactWordCloud.css';
 import ReactWordCloud from './ReactWordCloud';
-import { Paper, Card } from '@material-ui/core';
+import { Card } from '@material-ui/core';
 
 function ReactWordCloudCard({cloud}) {
   return (

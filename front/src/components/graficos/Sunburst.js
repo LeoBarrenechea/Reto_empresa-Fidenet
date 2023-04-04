@@ -369,13 +369,13 @@ class Sunburst extends React.Component {
   }
 
   _getLabelText(d) {
-    console.log(d);
+    // console.log(d);
     this.props._debug && this.props._log("Sunburst: _getLabelText(d)");
     var label;
     label = this.props.labelFunc && this.props.labelFunc(d);
-    console.log(label);
+    // console.log(label);
     if (this._textFits(d, label)){ 
-      console.log(label);
+      // console.log(label);
       return label
     };
     label = this.props.condensedLabelFunc && this.props.condensedLabelFunc(d);

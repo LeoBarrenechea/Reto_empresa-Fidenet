@@ -1,6 +1,5 @@
 import './Login.css';
 import { Box, createTheme, FormControl, InputBase, makeStyles, Paper, TextField, Typography } from '@material-ui/core';
-import Button from '@mui/material/Button';
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ApiCall from '../apiCall/Apicall';
@@ -43,6 +42,13 @@ const useStyles = makeStyles(theme => ({
     inputLogin:{
         display: 'flex',
         flexDirection: 'column',
+    },
+
+    inicio:{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: '30px'
     },
 
     user:{
@@ -151,6 +157,7 @@ export default function Login()
         <>
             <Paper elevation={3} className={classes.login}>
                 <div className={classes.inputLogin}>
+                    <h2 className={classes.inicio}>Inicio de sesión</h2>
                     <SetError data={data}/>
                     <InputBase className={classes.user} value={username} onChange={e => setUsername(e.target.value)}  placeholder='usuario'></InputBase>
                     <InputBase 
@@ -176,9 +183,9 @@ export default function Login()
                 </div>
                 {!isLoading ? <LoadingButton id='botton-primary' onClick={ClickButton} size='small' variant="text">Login</LoadingButton> : <LoadingButton id='botton-primary' size='small' disabled disableElevation variant="contained">Loading...</LoadingButton>}
                 <div className={classes.register}>
-                    <Typography className={classes.typ}>¿aun no estas registrado?</Typography>
+                    <Typography className={classes.typ}>¿Aún no estás registrado?</Typography>
                     <div className='borderCreate'>
-                        <p className={classes.createAcc} onClick={() => navigate('/register')}>Registrate</p>
+                        <p className={classes.createAcc} onClick={() => navigate('/register')}>Regístrate</p>
                     </div>
                 </div>
             </Paper>

@@ -14,14 +14,12 @@ function App() {
   let [data, setData] = useState('');
   let [mentions ,setMentions] = useState(null);
   let [cloud, setCloud] = useState(null);
-  let [type ,setType] = useState('');
-  let [probability ,setProbability] = useState('');
   let [isLoading, setIsLoading] = useState(false);
   let [SearchInput, setSearchInput] = useState('');
 
 
   return (
-    <MyContext.Provider value={{data, setData, apiData, SearchInput, cloud, setCloud, setSearchInput, setApiData, isLoading, setIsLoading, mentions, setMentions, probability, setProbability, type, setType}}>
+    <MyContext.Provider value={{data, setData, apiData, SearchInput, cloud, setCloud, setSearchInput, setApiData, isLoading, setIsLoading, mentions, setMentions}}>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}/>
