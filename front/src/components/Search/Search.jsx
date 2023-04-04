@@ -1,10 +1,8 @@
 
 import { useContext, useState } from "react";
 import search from "../../iconos-smartketing/search.svg";
-import searchBlue from "../../iconos-smartketing/search-blue.svg";
 import "./Search.css";
 import Sidenav from "../Sidenav/Sidenav";
-import ApiCall from "../apiCall/Apicall";
 import { useNavigate } from "react-router-dom";
 import { MyContext } from "../myContext/MyContext";
 import Swal from "sweetalert2";
@@ -44,8 +42,8 @@ export default function Search() {
   };
   
   const busqueda = () => {
-    console.log(SearchInput);
-    console.log(tkn);
+    // console.log(SearchInput);
+    // console.log(tkn);
     let data = {
       method: 'PUT',
       headers: {
@@ -57,7 +55,6 @@ export default function Search() {
     fetch("http://localhost:3001/users/updatesearch", data)
       .then(res => res.json())
       .then(data => {
-        console.log(data)
         if (data.msg === 'no guardado')
         {
           Swal.fire({

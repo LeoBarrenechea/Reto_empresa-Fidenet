@@ -1,7 +1,9 @@
-import { useEffect } from "react"
+import { useContext, useEffect } from "react"
+import { MyContext } from "../myContext/MyContext";
 
-export default function FilterData({apiData, setMentions, cloud, setCloud})
+export default function FilterData()
 {
+    let {SearchInput, setMentions, setCloud, apiData} = useContext(MyContext)
     let other = [];
     let person = [];
     let organization = [];
@@ -59,9 +61,8 @@ export default function FilterData({apiData, setMentions, cloud, setCloud})
                     children: array
                   };
                 }, initialValue);
-              };
+              };    
 
-            let sunburst = [];
             let worldCloud = [];
             newData.forEach(mention => {
                 if (mention !== undefined)
@@ -71,22 +72,22 @@ export default function FilterData({apiData, setMentions, cloud, setCloud})
                             worldCloud.push({"text": mention[i].normalized_text, "value": Math.floor(mention[i].probability * 50)})
                             if (mention[i].type === 'Other')
                             {
-                                other.push({name: mention[i].normalized_text, size: Math.floor(mention[i].probability * 1000), type: mention[i].type})
+                                other.push({name: mention[i].normalized_text, size: Math.floor(mention[i].probability * 100), type: mention[i].type})
                                 Other = convertArrayToObject(other, "type");
                             }
                             if (mention[i].type === 'Place')
                             {
-                                place.push({name: mention[i].normalized_text, size: Math.floor(mention[i].probability * 1000), type: mention[i].type})
+                                place.push({name: mention[i].normalized_text, size: Math.floor(mention[i].probability * 100), type: mention[i].type})
                                 Place = convertArrayToObject(place, "type");
                             }
                             if (mention[i].type === 'Person')
                             {
-                                person.push({name: mention[i].normalized_text, size: Math.floor(mention[i].probability * 1000), type: mention[i].type})
+                                person.push({name: mention[i].normalized_text, size: Math.floor(mention[i].probability * 100), type: mention[i].type})
                                 Person = convertArrayToObject(person, "type");
                             }
                             if (mention[i].type === 'Organization')
                             {
-                                organization.push({name: mention[i].normalized_text, size: Math.floor(mention[i].probability * 1000), type: mention[i].type})
+                                organization.push({name: mention[i].normalized_text, size: Math.floor(mention[i].probability * 100), type: mention[i].type})
                                 Organization = convertArrayToObject(organization, "type");
                             }
                     }
@@ -94,7 +95,7 @@ export default function FilterData({apiData, setMentions, cloud, setCloud})
                 }
             })
 
-            fullObj = {Person, Place, Other, Organization};
+            fullObj = {name: SearchInput, children:[ Person, Place, Other, Organization]};
             console.log(fullObj);
             setMentions(fullObj);
 

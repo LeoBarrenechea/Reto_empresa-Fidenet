@@ -8,21 +8,6 @@ import Formula1 from "./Formula";
 export default function ReactWordCloud({cloud}) {
   const param = useParams();
   let data = null;
- 
-  /* useEffect(() => {
-
-    let userData = {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `bearer ${localStorage.getItem('token')}`
-      },
-      body: JSON.stringify({search: param.name})
-    }
-
-    fetch('http://localhost:3001/users/findsearch', userData)
-      .then(res => res.json())
-      .then(data => console.log(data))
-  }, []) */
   
     if (param.name === "athletic")
     {

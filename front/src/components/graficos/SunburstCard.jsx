@@ -41,7 +41,7 @@ function SunburstCard({SearchInput, mentions}) {
         {
           mentions &&
           <Sunburst
-          data={ mentions.Organization}
+          data={ mentions}
           scale="linear"
           tooltipContent={<div class="sunburstTooltip" style="position:absolute; color:'black'; z-index:10; background: #e2e2e2; padding: 5px; text-align: center;" />}
           tooltip
