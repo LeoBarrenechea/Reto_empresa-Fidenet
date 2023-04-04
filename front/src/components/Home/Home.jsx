@@ -7,8 +7,6 @@ import 'aos/dist/aos.css'
 import Header from '../Header/Header';
 import sunburstApp from '../images/sunburstApp.PNG'
 import wordCloudApp from '../images/wordCloudApp.PNG'
-import sentimientosApp from '../images/sentimientosApp.PNG'
-import mapaApp from '../images/mapaApp.PNG'
 import sentimientosMapaApp from '../images/sentimientosMapaApp.PNG'
 import usuariosApp from '../images/usuariosApp.PNG'
 import logoHtml from '../images/html5-logo.jpg'
@@ -22,7 +20,6 @@ import logoMongodb from '../images/mongodb-logo.png'
 import logoAws from '../images/AWS-logo.png'
 import { makeStyles } from '@material-ui/core';
 import Footer from '../footer/Footer';
-import { useRef } from 'react';
 
 
 const useStyles = makeStyles(theme => ({

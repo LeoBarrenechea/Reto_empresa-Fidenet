@@ -10,14 +10,9 @@ import { MyContext } from "../myContext/MyContext";
 
 export default function Sidenav() {
   const token = localStorage.getItem('token');
-  localStorage.setItem(token, 'juan');
-
   const imgRef = useRef();
 
   let {SearchInput} = useContext(MyContext);
-
-
-  console.log(SearchInput);
 
   const handleQuestionClick = () => {
     Swal.fire({

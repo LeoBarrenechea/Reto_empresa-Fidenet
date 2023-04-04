@@ -1,6 +1,5 @@
 import './Login.css'
 import { makeStyles, Paper } from "@material-ui/core"
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const styles = makeStyles(theme => ({
