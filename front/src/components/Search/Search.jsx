@@ -13,8 +13,9 @@ export default function Search() {
   const [visible, setVisible] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const navigate = useNavigate();
-
+  
   let {SearchInput, setSearchInput} = useContext(MyContext);
+  let tkn =localStorage.getItem('token')
 
   const cambioColor = (event) => {
     if (event.target.value !== "") {
@@ -26,6 +27,17 @@ export default function Search() {
     setInputValue(event.target.value);
   };
 
+  const WithoutTkn = () => {
+    Swal.fire({
+      icon: 'error',
+      showCloseButton: true,
+      title: '¿aun no has inciado sesion?',
+      text: 'inicia sesion para acceder a las busquedas',
+      footer: '<a href=login>Iniciar sesion</a>',
+      showConfirmButton: false, 
+    });
+  }
+
   const clearInput = () => {
     setInputValue("");
     setVisible(false);
@@ -33,7 +45,6 @@ export default function Search() {
   
   const busqueda = () => {
     console.log(SearchInput);
-    let tkn =localStorage.getItem('token')
     console.log(tkn);
     let data = {
       method: 'PUT',
@@ -77,7 +88,11 @@ export default function Search() {
 
   return (
     <>
-      <Sidenav />
+    {
+      !tkn ? <WithoutTkn />
+      :
+      <>
+      <Sidenav SearchInput={SearchInput}/>
       <div className="pagSearch">
         <div className="buscar">
           <input
@@ -86,13 +101,15 @@ export default function Search() {
             required
             value={inputValue}
             onChange={cambioColor}
-          />
+            />
           <div className={`btn ${visible ? "active" : ""}`} onClick={busqueda}>
             <img src={search} alt="search" />
           </div>
           <span className="clear" onClick={clearInput}></span>
         </div>
       </div>
+      </>
+    }
     </>
   );
 }

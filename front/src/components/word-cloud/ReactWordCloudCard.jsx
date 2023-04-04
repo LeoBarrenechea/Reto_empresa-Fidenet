@@ -2,13 +2,13 @@ import './ReactWordCloud.css';
 import ReactWordCloud from './ReactWordCloud';
 import { Paper, Card } from '@material-ui/core';
 
-function ReactWordCloudCard() {
+function ReactWordCloudCard({cloud}) {
   return (
     <div className="wordCloudCard">
       <Card style={{height:620, borderRadius: 20 }} elevation={3}>
         <h2 className="wordCloudTitle">Palabras relacionadas</h2>
         <div className="wordCloudDisplay">
-          <ReactWordCloud />
+          <ReactWordCloud cloud={cloud}/>
         </div>
       </Card>
     </div>

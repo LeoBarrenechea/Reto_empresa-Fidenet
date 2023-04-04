@@ -66,27 +66,27 @@ export class UsersService {
         return null;
       }
 
-      else if (user[0].searches.length >= 3 && user[0].typeAcc === 'free')
+      else if (user[0].searches.length +1 > 3 && user[0].typeAcc === 'free')
       {
-        return user;
+        return 3;
       }
 
       else
       {
         await this.usersModel.updateOne({username: req.user.username}, {$push: {searches: data.value}})
-        return await this.usersModel.find({username: req.user.username})
+        return "ok";
       }
     }
   }
 
-  async FindSearch(body: any, req: any) {
+  async FindSearch(search: any, req: any) {
     let user = this.usersModel.find({username: req.user.username});
 
     if (user)
     {
       for (let i = 0; i < user[0].searches.length; i++)
       {
-        if (user[0].searches[i] === body)
+        if (user[0].searches[i] === search)
         {
           return user[0].searches[i];
         }

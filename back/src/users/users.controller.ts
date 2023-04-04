@@ -24,7 +24,7 @@ export class UsersController {
     console.log(body);
     let response = "";
     let user = await this.usersService.addUser(body);
-    if (user.email !== body.email && user.username !== body.username)
+    if (user.username !== body.username)
     {
        return res.status(HttpStatus.CREATED).send({msg:'usuario creado'});
     }
@@ -84,10 +84,11 @@ export class UsersController {
     {
       return {msg: 'no guardado'};
     }
-    else if (user[0].searches.length >= 3)
+    else if (user >= 3)
     {
       return {msg: 'exceso de busquedas'};
     }
+    
     else{
       return {msg: 'guardado'};
     }

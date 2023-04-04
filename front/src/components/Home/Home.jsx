@@ -22,6 +22,7 @@ import logoMongodb from '../images/mongodb-logo.png'
 import logoAws from '../images/AWS-logo.png'
 import { makeStyles } from '@material-ui/core';
 import Footer from '../footer/Footer';
+import { useRef } from 'react';
 
 
 const useStyles = makeStyles(theme => ({
@@ -32,13 +33,13 @@ const useStyles = makeStyles(theme => ({
 
 export default function Home() {
     const classes = useStyles();
-
+    
     AOS.init({ duration: 900 })
 
 
     return (
         <>
-            <Header />
+            <Header/>
             <div className="homePage">
                 <div id= "fotoCabecera"className="fotoCabecera">
                     <div className="displayContainer" >

@@ -5,13 +5,13 @@ import Athletic from "./Athletic";
 import Elon from "./Elon";
 import Formula1 from "./Formula";
 
-export default function ReactWordCloud() {
+export default function ReactWordCloud({cloud}) {
   const param = useParams();
   let data = null;
+ 
+  /* useEffect(() => {
 
-  useEffect(() => {
-
-    let data = {
+    let userData = {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `bearer ${localStorage.getItem('token')}`
@@ -19,10 +19,10 @@ export default function ReactWordCloud() {
       body: JSON.stringify({search: param.name})
     }
 
-    fetch('http://localhost:3001/users/findsearch', data)
+    fetch('http://localhost:3001/users/findsearch', userData)
       .then(res => res.json())
       .then(data => console.log(data))
-  }, [])
+  }, []) */
   
     if (param.name === "athletic")
     {
@@ -36,8 +36,6 @@ export default function ReactWordCloud() {
     {
       data = Formula1;
     }
-    console.log(data);
-
 
     const options = {
       colors: [
@@ -51,7 +49,7 @@ export default function ReactWordCloud() {
       enableTooltip: false,
       deterministic: false,
       fontFamily: 'Poppins',
-      fontSizes: [10, 80],
+      fontSizes: [10, 30],
       fontStyle: "normal",
       fontWeight: "normal",
       padding: 0,
@@ -62,7 +60,8 @@ export default function ReactWordCloud() {
       transitionDuration: 1000
     };
     return (
-      <div
+        cloud &&
+        <div
         style={{
           height: "65vh",
           width: "20vw",
@@ -72,9 +71,9 @@ export default function ReactWordCloud() {
           alignItems: "center",
           textAlign: "center"
         }}
-      >
-        <ReactCloud words={data} options={options} />
-      </div>
+        >
+          <ReactCloud words={cloud} options={options} />
+          </div>
     );
   }
 
