@@ -24,7 +24,7 @@ export class UsersController {
     console.log(body);
     let response = "";
     let user = await this.usersService.addUser(body);
-    if (user.email !== body.email && user.username !== body.username)
+    if (user.username !== body.username)
     {
        return res.status(HttpStatus.CREATED).send({msg:'usuario creado'});
     }
@@ -75,21 +75,29 @@ export class UsersController {
 
   @UseGuards(AuthGuard('jwt'))
   @Put('updatesearch')
-  async updateSearch(@Body() data: any){
+  async updateSearch(@Body() data: any, @Req() req:any){
     
-    let user = await this.usersService.updateSearches(data);
-  console.log(user);
+    let user = await this.usersService.updateSearches(data, req);
+      console.log(user);
       
-    if (!user || user[0].searches.length >= 1)
+    if (!user)
     {
       return {msg: 'no guardado'};
     }
-    else if (user[0].searches.length >= 3)
+    else if (user >= 3)
     {
-      return {msg: 'no guardado por exceso de busquedas'};
+      return {msg: 'exceso de busquedas'};
     }
+    
     else{
-      return {msg: 'exitosamente guardado'};
+      return {msg: 'guardado'};
     }
+  }
+
+  @UseGuards(AuthGuard('jwt'))
+  @Get('findsearch')
+  async findSearch(@Body() body: any, @Req() req: any){
+
+    return await this.usersService.FindSearch(body.search, req);
   }
 }

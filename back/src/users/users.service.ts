@@ -54,26 +54,49 @@ export class UsersService {
     return await this.usersModel.find({username: username});
   }
 
-  async updateSearches(data:any){
-    console.log(data.username);
-    console.log(data.search);
-
-    if (data.search && data.username)
+  async updateSearches(data:any, req:any){
+    if (data.value && req.user.username)
     {
-      let user = await this.usersModel.find({username: data.username})
+      let user = await this.usersModel.find({username: req.user.username})
+      console.log(user);
       
-      if (!user || (user[0].searches.length >= 3 && user[0].typeAcc === 'free'))
+      
+      if (!user)
       {
         return null;
       }
 
+      else if (user[0].searches.length +1 > 3 && user[0].typeAcc === 'free')
+      {
+        return 3;
+      }
+
       else
       {
-        await this.usersModel.updateOne({username: data.username}, {$push: {searches: data.search}})
-        return user;
+        await this.usersModel.updateOne({username: req.user.username}, {$push: {searches: data.value}})
+        return "ok";
       }
     }
-    
+  }
+
+  async FindSearch(search: any, req: any) {
+    let user = this.usersModel.find({username: req.user.username});
+
+    if (user)
+    {
+      for (let i = 0; i < user[0].searches.length; i++)
+      {
+        if (user[0].searches[i] === search)
+        {
+          return user[0].searches[i];
+        }
+      }
+    }
+
+    else
+    {
+      return {msg: 'no funciona'};
+    }
   }
 }
 

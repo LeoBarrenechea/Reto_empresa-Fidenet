@@ -7,8 +7,6 @@ import 'aos/dist/aos.css'
 import Header from '../Header/Header';
 import sunburstApp from '../images/sunburstApp.PNG'
 import wordCloudApp from '../images/wordCloudApp.PNG'
-import sentimientosApp from '../images/sentimientosApp.PNG'
-import mapaApp from '../images/mapaApp.PNG'
 import sentimientosMapaApp from '../images/sentimientosMapaApp.PNG'
 import usuariosApp from '../images/usuariosApp.PNG'
 import logoHtml from '../images/html5-logo.jpg'
@@ -21,6 +19,7 @@ import logoNestjs from '../images/nestjs-logo.png'
 import logoMongodb from '../images/mongodb-logo.png'
 import logoAws from '../images/AWS-logo.png'
 import { makeStyles } from '@material-ui/core';
+import Footer from '../footer/Footer';
 
 
 const useStyles = makeStyles(theme => ({
@@ -31,15 +30,15 @@ const useStyles = makeStyles(theme => ({
 
 export default function Home() {
     const classes = useStyles();
-
+    
     AOS.init({ duration: 900 })
 
 
     return (
         <>
-            <Header />
+            <Header/>
             <div className="homePage">
-                <div className="fotoCabecera">
+                <div id= "fotoCabecera"className="fotoCabecera">
                     <div className="displayContainer" >
                         <h4 className="eslogan" data-aos='fade-right'>Análisis de datos de redes sociales en la palma de tu mano</h4>
                         <h2 className="somosSmartketing" data-aos='fade-right'>Somos Smartketing</h2>
@@ -196,7 +195,7 @@ export default function Home() {
                 <h1>Suscríbete</h1>
                 <h2 className={classes.contact} id='contact'>Contacta con nosotros</h2>
             </div>
-
+            <Footer/>
         </>
     )
 }

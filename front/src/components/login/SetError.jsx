@@ -1,6 +1,5 @@
 import './Login.css'
 import { makeStyles, Paper } from "@material-ui/core"
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const styles = makeStyles(theme => ({
@@ -27,13 +26,14 @@ export default function SetError({data})
 {
     const classes = styles();
     const navigate = useNavigate();
+        console.log(data);
 
-    if (data.access_token === undefined && data.msg)
-    {
-        if (data.msg === 'no username')
+        if (data.access_token === undefined && data.msg)
         {
-            return (
-                <Paper className={classes.noUserMsg}>
+            if (data.msg === 'no username')
+            {
+                return (
+                    <Paper className={classes.noUserMsg}>
                     <p className={classes.letters}> no se ha encontrado ninguna cuenta con este nombre de usuario, intentalo de nuevo o <a className={classes.createAcc} onClick={() => navigate('/register')}>crea una cuenta</a></p>
                 </Paper>
             )
@@ -48,7 +48,7 @@ export default function SetError({data})
         }
     }
     else
-        return (
-            <></>
-        )
+    return (
+        <></>
+    )
 }

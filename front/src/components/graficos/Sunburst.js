@@ -28,7 +28,7 @@ import { transition as d3Transition } from "d3-transition";
 /**
 * Creates a zoomable Sunburst
 * @param {object} props
-* @param {array} props.data - see the d3 {@link https://github.com/defunctzombie/d3-examples/blob/master/dendrogram/flare.json|flare.json}
+* @param {object} props.data - see the d3 {@link https://github.com/defunctzombie/d3-examples/blob/master/dendrogram/flare.json|flare.json}
     data for the shape that is required. 
 * @param {string} props.width - width of svg
 * @param {string} props.height - height of svg. 
@@ -58,7 +58,7 @@ import { transition as d3Transition } from "d3-transition";
 //FIXME normalize case
 class Sunburst extends React.Component {
   static propTypes = {
-    data: PropTypes.object.isRequired,
+    data: PropTypes.array.isRequired,
     width: PropTypes.string.isRequired,
     height: PropTypes.string.isRequired,
     count_member: PropTypes.string.isRequired,
@@ -369,10 +369,15 @@ class Sunburst extends React.Component {
   }
 
   _getLabelText(d) {
+    // console.log(d);
     this.props._debug && this.props._log("Sunburst: _getLabelText(d)");
     var label;
     label = this.props.labelFunc && this.props.labelFunc(d);
-    if (this._textFits(d, label)) return label;
+    // console.log(label);
+    if (this._textFits(d, label)){ 
+      // console.log(label);
+      return label
+    };
     label = this.props.condensedLabelFunc && this.props.condensedLabelFunc(d);
     if (this._textFits(d, label)) return label;
     return null;

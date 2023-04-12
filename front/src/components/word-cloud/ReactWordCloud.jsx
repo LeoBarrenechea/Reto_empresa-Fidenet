@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import ReactCloud from "react-wordcloud";
+import Athletic from "./Athletic";
+import Elon from "./Elon";
+import Formula1 from "./Formula";
 
-import words from "./words";
-import Athletic from "./wordsAthletic";
-import Elon from "./wordsElon";
-import Formula from "./wordsFormula";
-
-export default function ReactWordCloud() {
+export default function ReactWordCloud({cloud}) {
+  const param = useParams();
+  let data = null;
+  
+    if (param.name === "athletic")
+    {
+      data = Athletic;
+    }
+    else if (param.name === "Elon Musk")
+    {
+      data = Elon;
+    }
+    else if (param.name === "formula 1")
+    {
+      data = Formula1;
+    }
 
     const options = {
       colors: [
@@ -20,7 +34,7 @@ export default function ReactWordCloud() {
       enableTooltip: false,
       deterministic: false,
       fontFamily: 'Poppins',
-      fontSizes: [10, 80],
+      fontSizes: [10, 30],
       fontStyle: "normal",
       fontWeight: "normal",
       padding: 0,
@@ -31,19 +45,20 @@ export default function ReactWordCloud() {
       transitionDuration: 1000
     };
     return (
-      <div
+        cloud &&
+        <div
         style={{
-          height: "70vh",
-          width: "25vw",
+          height: "65vh",
+          width: "20vw",
           backgroundColor: "white",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center"
         }}
-      >
-        <ReactCloud words={Elon} options={options} />
-      </div>
+        >
+          <ReactCloud words={cloud} options={options} />
+          </div>
     );
   }
 

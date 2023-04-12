@@ -1,6 +1,5 @@
 import './Login.css';
 import { Box, createTheme, FormControl, InputBase, makeStyles, Paper, TextField, Typography } from '@material-ui/core';
-import Button from '@mui/material/Button';
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ApiCall from '../apiCall/Apicall';
@@ -11,6 +10,7 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { MyContext } from '../myContext/MyContext';
 import SetError from './SetError';
 import LoadingButton from '@mui/lab/LoadingButton'
+import Footer from '../footer/Footer';
 
 
 const theme = createTheme({
@@ -189,6 +189,7 @@ export default function Login()
                     </div>
                 </div>
             </Paper>
+            <Footer />
         </>
     )
 }

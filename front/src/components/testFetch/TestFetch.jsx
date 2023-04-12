@@ -1,61 +1,46 @@
 import './testFetch.css';
 import { useContext, useEffect } from "react";
-import ApiCall from "../apiCall/Apicall";
 import { MyContext } from "../myContext/MyContext";
-import Sunburst from "../graficos/Sunburst";
-import FilterData from "../filterData/FilterData";
-/* import data from "../graficos/data";
- */
-import data1 from "../graficos/data"
 import ReactWordCloudCard from "../word-cloud/ReactWordCloudCard"
 import SunburstCard from "../graficos/SunburstCard";
 import LineasCard from "../Lineas/LineasCard"
 import MapaCard from "../Mapa/MapaCard"
 
-import Mapa from "../Mapa/Mapa";
-// import Lineas from "../Lineas/Lineas"
 import Sidenav from "../Sidenav/Sidenav";
+import { useParams } from 'react-router-dom';
+import FilterData from '../filterData/FilterData';
 
 
 export default function TestFetch() {
 
-    let { data, setData, setMentions, mentions, setType, setProbability, probability, type } = useContext(MyContext);
+    let { data, setData, SearchInput, cloud, setCloud, setSearchInput, apiData, setApiData, setMentions, mentions, setType, setProbability, probability, type } = useContext(MyContext);
+    const param = useParams();
 
     useEffect(() => {
-        ApiCall({ setData }, 'https://smartketing.onrender.com/tw_extraction/athletic')
-    }, [])
+        if (SearchInput !== '')
+        console.log('entra en useEffect');
+        if (SearchInput === 'Elon Musk')
+            SearchInput = SearchInput.replace(" ", "_").toLowerCase();
+        if (SearchInput === 'formula 1')
+            SearchInput = SearchInput.replace(" ", "");
+       fetch('https://smartketing.onrender.com/tw_extraction/'+ SearchInput)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setApiData(data)
+            })
+    },[SearchInput])
 
-    FilterData({ data, setMentions, setProbability, setType, mentions, type, probability });
-
-    useEffect(() => {
-
-        ApiCall({ setData }, 'https://smartketing.onrender.com/tw_extraction/athletic')
-        console.log(data);
-    }, [])
-
-    useEffect(() => {
-        if (type !== '')
-            console.log(type);
-    }, [type])
-
-    useEffect(() => {
-        if (mentions.length > 0)
-            console.log(mentions[0].probability);
-    }, [mentions])
-
-    useEffect(() => {
-        if (type !== '')
-            console.log(probability)
-    }, [probability])
-
+        FilterData();
+ 
     return (
         <>
             <Sidenav />
             <div className="wordPage">
-                <h1 className="searchWord">Palabra</h1>
+                <h1 className="searchWord">{param.name}</h1>
                 <div className="row">
-                    <SunburstCard />
-                    <ReactWordCloudCard />
+                    <SunburstCard SearchInput={SearchInput} mentions={mentions}/>
+                    <ReactWordCloudCard cloud={cloud}/>
                 </div>
                 <div className="column">
                     <LineasCard />
